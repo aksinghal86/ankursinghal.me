@@ -1,0 +1,140 @@
+baseURL: /
+theme: hugo-apero
+languageCode: en
+title: Ankur Singhal
+author: Ankur Singhal
+copyright: ''
+googleAnalytics: ''
+disqusShortname: ''
+metaDataFormat: yaml
+footnoteReturnLinkContents: '&#8617;'
+paginate: 5
+preserveTaxonomyNames: yes
+ignoreFiles:
+  - \.Rmd$
+  - \.Rmarkdown$
+  - _cache$
+  - \.knit\.md$
+  - \.utf8\.md$
+enableEmoji: yes
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    renderer:
+      hardwraps: no
+      unsafe: yes
+  highlight:
+    style: github
+  tableOfContents:
+    endLevel: 2
+    ordered: no
+    startLevel: 2
+params:
+  theme: ''  # can be one of forest / grayscale / peach / plum / poppy / sky / violet / water
+  custom_theme: 'named-colors'
+  customheadingFontFamily: Bitter
+  customtextFontFamily: Atkinson Hyperlegible
+  description: Ankur Singhal's personal website
+  favicon: /img/favicon.ico
+  headingFontFamily: sans-serif
+  logo: /img/favicon-32x32.png
+  mainSections:
+    - project
+    - software
+    # - blog
+  math:
+    renderer: katex
+  navallcaps: yes
+  orgLocal: Anywhere
+  orgName: RStudio
+  sharing_image: /img/papillons.jpg
+  social:
+    - icon: github
+      icon_pack: fab
+      url: https://github.com/aksinghal86
+    - icon: twitter
+      icon_pack: fab
+      url: https://twitter.com/skepticalankur
+    - icon: linkedin
+      icon_pack: fab
+      url: https://linkedin.com/in/ankursing
+    - icon: envelope
+      icon_pack: fas
+      url: /contact
+    # - icon: rss
+    #   icon_pack: fas
+    #   url: /blog/index.xml
+  socialInFooter: yes
+  socialInHeader: no
+  textFontFamily: sans-serif
+  twitter: skepticalankur
+  utterances:
+    issue_term: pathname
+    label: 'comments :crystal_ball:'
+    repo_name: apreshill/apero
+    theme: boxy-light
+    use_utterances: yes
+taxonomies:
+  category: categories
+  series: series
+  tag: tags
+menu:
+  footer:
+    - name: License
+      title: License
+      url: /license/
+      weight: 1
+    - name: Contact
+      title: Contact form
+      url: /contact/
+      weight: 2
+    # - name: Contributors
+    #   title: Contributors
+    #   url: /contributors/
+    #   weight: 3
+  header:
+    - name: About
+      title: About me
+      url: /about/
+      weight: 1
+    - name: Litigation
+      title: Litigation projects
+      url: /project/
+      weight: 2
+    - name: Software 
+      title: Data science and software dashboards
+      url: /software/
+      weight: 3
+    # - name: Writings
+    #   title: Blog, thoughts, and noodlings
+    #   url: /blog/
+    #   weight: 4
+    - name: CV
+      title: Curriculum Vitae
+      url: /cv/
+      weight: 5
+#     - name: Elements
+#       title: Element Page
+#       url: /elements/
+#       weight: 6
+privacy:
+  disqus:
+    disable: no
+  googleAnalytics:
+    anonymizeIP: yes
+    disable: no
+    respectDoNotTrack: yes
+  instagram:
+    disable: no
+    simple: yes
+  twitter:
+    disable: no
+    enableDNT: yes
+    simple: no
+  vimeo:
+    disable: no
+    enableDNT: yes
+    simple: yes
+  youtube:
+    disable: no
+    privacyEnhanced: yes
