@@ -20,14 +20,14 @@ links:
 #   icon_pack: far
 #   name: Blog post
 #   url: https://education.rstudio.com/blog/2020/07/palmerpenguins-cran/
-excerpt: smartLYT uses an unsupervised clustering algorithm to group documents from PubMed search results into discrete clusters to focus literature deep dives. 
+excerpt: smartlyt uses an unsupervised clustering algorithm to group documents from PubMed search results into discrete clusters to focus literature deep dives. 
 # layout: single-sidebar
 subtitle: For smarter and more directed PubMed searches
 tags:
 - R
 - Shiny
 - unsupervised learning
-title: smartLYT
+title: smartlyt
 ---
 
 ## [smartlyt](https://aksinghal86.shinyapps.io/smartlyt) is an R Shiny app that allows you to cluster your PubMed literature searches. 
@@ -40,7 +40,7 @@ How many dead-end rabbit holes do you go down when you need to do a deep literat
 
 Wouldn't it be nice if someone could give you a list of a few *relevant* papers to get you a head start? Save yourself some time and the client some of those beloved \$\$\$s.
 
-### The smartLYT app
+### The smartlyt app
 
 Well, I created just the right tool in [smartlyt](https://aksinghal86.shinyapps.io/smartlyt). I always thought that it would be a good idea to create a document clusterer, which would ping PubMed, get the results, and automatically cluster documents based on context, i.e., by finding similarity between titles and abstracts of different papers. This way, when you do the initial dive, at least you have some pre-defined islands to explore as opposed to just diving in blind. 
 

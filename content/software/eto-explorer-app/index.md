@@ -30,22 +30,22 @@ tags:
 title: Ethylene Oxide Explorer
 ---
 
-## [Ethylene Oxide Explorer](https://dashboards.theempiricalsolutions.com/p/eto-explorer-app) is a tool to visualize ethylene oxide emissions and cancer risks on a map and compare the data in charts and a table. 
+## [Ethylene Oxide Explorer](https://dashboards.theempiricalsolutions.com/p/eto-explorer-app) is a tool to visualize ethylene oxide emissions and estimated cancer risks on a map. It also has capabilities to compare emissions by facilities over time or to view the raw data in a data table.  
 
 ---
 
-### Because Efficiency
+Ethylene oxide is a colorless, flammable gas with important industrial uses, e.g., it is used an intermediate for making ethylene glycol, which is the antifreeze you put in your car. It is also the most effective sterilant for sterilizing medical devices and spices. Issue is that ethylene oxide is also classified as a carcinogen by federal and international agencies and has been categorized as a hazardous air pollutant by EPA. Therefore, there is a need to regulate emissions to limit exposures to the communities near sterilizing facilties. 
 
-How many dead-end rabbit holes do you go down when you need to do a deep literature dive on a certain topic or a chemical? I for one have to do a lot of literature dives and I get so frustrated and overwhelmed when I search a topic and hundreds of articles show up. Then begins the process of randomly picking some articles, going through the references, accepting, rejecting, reading abstracts, and starting over again. Every time I start to gain traction, I hit a tangential topic and there go several more precious hours. 
+There are lots of nuances around this issue that are better suited for a blog post, but to touch upon some, ethylene oxide is also produced endogenously, i.e., by the body itself, as part of exhaled breath and is a natural byproduct of combustion and even vehicle emissions. So, everyone is exposed to it and it is hard to tease out the contribution from the environment versus the contribution from industrial emissions. 
 
-Wouldn't it be nice if someone could give you a list of a few *relevant* papers to get you a head start? Save yourself some time and the client some of those beloved \$\$\$s.
+Nevertheless, since EPA is tasked to ensure the safety of the general public and to communicate risks from a contaminant to the public, EPA conducts complex modeling to estimate cancer risks to the nearby communities from emissions reported by facilities. This is a multi-year effort that estimates point concentration of a chemical at every census tract in the US using numerous inputs, e.g., nearby meteorology, geography, etc. This estimated point concentration is then used to generate an estimated cancer risk for that census tract. 
 
-### The smartLYT app
+EPA has done this modeling twice now. The first assessment was called [National Air Toxics Assessment (NATA)](https://www.epa.gov/national-air-toxics-assessment). It was released in 2017 and was conducted using emissions reported by faciliteis in 2014. The latest version is called [Air Toxics Screening Assessment (AirToxScreen)](https://www.epa.gov/AirToxScreen), which was released in Spring 2022 using data reported in 2017. 
 
-Well, I created just the right tool in [smartlyt](https://aksinghal86.shinyapps.io/smartlyt). I always thought that it would be a good idea to create a document clusterer, which would ping PubMed, get the results, and automatically cluster documents based on context, i.e., by finding similarity between titles and abstracts of different papers. This way, when you do the initial dive, at least you have some pre-defined islands to explore as opposed to just diving in blind. 
+Which brings me to the [Ethylene Oxide Explorer tool](https://dashboards.theempiricalsolutions.com/p/eto-explorer-app) that I built.While EPA also has a tool, I think it is slow and difficult to use, breaks all the time, presents the information in a different way that I would like, and does not allow one to compare results between NATA and AirToxScreen. My goal was to address these issues and to bring ethylene oxide-specific information from both the NATA and AirToxScreen assessments into one place. 
 
-### The approach
+The Ethylene Oxide Explorer tool maps not only cancer risks from the highest impacted census tracts from both NATA and AirToxScreen, it also shows ethylene oxide emissions from facilities that, according to EPA, also contribute to said risk. One can also compare emissions between facilities and over time, e.g., say you were interested in understanding how emissions from a facility near you have changed over time compared to another facility in a different state. Lastly, all the data used to develop the dashboard can also be viewed in a table format. 
 
-smartlyt uses a [term frequency-inverse document frequency (TF-IDF)](https://en.wikipedia.org/wiki/Tf%E2%80%93idf)] to first weight the terms in an abstract relative to the corpus and then uses simple hierarchical clustering to group documents together. This is one of the simpler techniques out there to cluster documents. In the future, I plan on developing this tool by 1) improving its speed; 2) comparing against different methods like [Latent Dirichlet Allocation (LDA)](https://towardsdatascience.com/latent-dirichlet-allocation-lda-9d1cd064ffa2); and 3) using network mapping to identify articles that cite each other. The last bit is the natural next step of this tool. 
+I have other modules and capabilities I would like to build into this tool but am swamped with other projects at the time. If you would like to collaborate or have ideas on how to improve, please do email me using info provided in the [CV](/cv/) or via the [contact form](/contact/). 
 
-If anyone would like to contribute especially towards improving the UI (my JavaScript skills are, ahem, limited to be kind), please reach out. I would love the help. Nearly all my projects are up for collaboration. 
+*Full disclosure: I have been retained by clients to test and implement technologies to control ethylene oxide emissions. I am also involved in a litigation project supporting client on this matter. [See here](/project/) for more details.*
