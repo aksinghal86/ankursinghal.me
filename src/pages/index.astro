@@ -1,0 +1,103 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import DecayChart from '../components/DecayChart.astro';
+
+const chemicals = (await getCollection('litigation'))
+  .filter((c) => c.data.group === 'main')
+  .sort((a, b) => a.data.order - b.data.order);
+
+const posts = (await getCollection('blog', (p) => !p.data.draft))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+
+const fmt = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
+
+const shortName = (s: string) => s.replace(/\s*\(.*\)/, '').replace(/ and chlorinated solvents/, '');
+---
+
+<Base>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Who was exposed, to what, and how much?</h1>
+        <p>
+          I answer that question for water, air, and consumer products, in litigation, regulation, and research.
+          I also build the data tools and dashboards that let other people check the answer.
+        </p>
+        <p class="role">Ankur Singhal, exposure scientist and data scientist at Environmental Health &amp; Engineering (EH&amp;E).</p>
+      </div>
+      <DecayChart />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <ul class="paths">
+        <li>
+          <a href="/litigation">
+            <span class="name">Litigation and expert work</span>
+            <span class="desc">Exposure assessment, source attribution, and data support for legal teams, organized by chemical.</span>
+          </a>
+        </li>
+        <li>
+          <a href="/software">
+            <span class="name">Software and AI</span>
+            <span class="desc">Dashboards, machine learning tools, and language model experiments, from public apps to client platforms.</span>
+          </a>
+        </li>
+        <li>
+          <a href="/research">
+            <span class="name">Research</span>
+            <span class="desc">Peer-reviewed papers, preprints, and conference talks.</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Chemicals I work on</h2>
+      <p class="chem-strip">
+        {chemicals.map((c, i) => (
+          <>
+            <a href={`/litigation#${c.id}`}>{shortName(c.data.chemical)}</a>
+            {i < chemicals.length - 1 && <span aria-hidden="true">/</span>}
+          </>
+        ))}
+      </p>
+    </div>
+  </section>
+
+  {posts.length > 0 && (
+    <section class="section">
+      <div class="wrap">
+        <h2>Recent writing</h2>
+        <ul class="post-list">
+          {posts.map((p) => (
+            <li>
+              <time datetime={p.data.date.toISOString()}>{fmt.format(p.data.date)}</time>
+              <div>
+                <h3><a href={`/blog/${p.id}`}>{p.data.title}</a></h3>
+                <p>{p.data.description}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )}
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Work with me</h2>
+      <div class="prose">
+        <p>
+          I take on expert and consulting work, data and analytics support for legal teams, and collaborations on dashboards and exposure models.
+          <a href="/contact">Send me a message</a> or read the <a href="/cv">CV</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+</Base>

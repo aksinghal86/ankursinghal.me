@@ -1,0 +1,61 @@
+---
+import Base from '../layouts/Base.astro';
+import { profile, education, societies, experience, otherWork, underReview, preprints, inPreparation, publications, presentations } from '../data/cv';
+---
+
+<Base title="CV" description="Curriculum vitae of Ankur Singhal: experience, education, publications, and presentations.">
+  <div class="wrap">
+    <div class="page-head">
+      <h1>Curriculum vitae</h1>
+      <div class="toolbar">
+        <button class="btn" type="button" id="print">Print or save as PDF</button>
+        <a class="btn quiet" href="/contact">Contact me</a>
+      </div>
+    </div>
+
+    <div class="cv">
+      <h2>Profile</h2>
+      {profile.map((p) => <p>{p}</p>)}
+
+      <h2>Experience</h2>
+      {experience.map((job) => (
+        <div class="cv-job">
+          <h3>{job.title}, {job.org}</h3>
+          <p class="when">{job.when}</p>
+          <ul>{job.bullets.map((b) => <li>{b}</li>)}</ul>
+        </div>
+      ))}
+
+      <h2>Other selected work</h2>
+      <ul>{otherWork.map((w) => <li>{w}</li>)}</ul>
+      <p>Chemical-by-chemical descriptions of litigation and consulting work are on the <a href="/litigation">litigation page</a>, and software projects are on the <a href="/software">software page</a>.</p>
+
+      <h2>Education</h2>
+      <ul>{education.map((e) => <li>{e.degree}, {e.school}, {e.year}</li>)}</ul>
+
+      <h2>Professional societies</h2>
+      <ul>{societies.map((s) => <li>{s}</li>)}</ul>
+
+      <h2>Publications</h2>
+      <ul class="refs">{publications.map((p) => <li>{p}</li>)}</ul>
+
+      <h3>Preprints</h3>
+      <ul class="refs">
+        {preprints.map((p) => <li><a href={p.url}>{p.title}</a></li>)}
+      </ul>
+
+      <h3>Under review</h3>
+      <ul class="refs">{underReview.map((p) => <li>{p}</li>)}</ul>
+
+      <h3>In preparation</h3>
+      <ul class="refs">{inPreparation.map((p) => <li>{p}</li>)}</ul>
+
+      <h2>Presentations and posters</h2>
+      <ul class="refs">{presentations.map((p) => <li>{p}</li>)}</ul>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('print')?.addEventListener('click', () => window.print());
+  </script>
+</Base>

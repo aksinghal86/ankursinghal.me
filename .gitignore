@@ -1,5 +1,10 @@
+node_modules/
+dist/
+.astro/
+.DS_Store
+.env
+.env.*
 .Rproj.user
 .Rhistory
 .Rdata
 .httr-oauth
-.DS_Store

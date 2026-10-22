@@ -1,0 +1,50 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+const projects = (await getCollection('software')).sort((a, b) => a.data.order - b.data.order);
+const kinds = ['Dashboards', 'Machine learning', 'AI and language models'] as const;
+---
+
+<Base
+  title="Software and AI"
+  description="Dashboards, machine learning tools, and language model experiments by Ankur Singhal."
+>
+  <div class="wrap">
+    <div class="page-head">
+      <h1>Software and AI</h1>
+      <p class="lede">
+        Tools I have built to make exposure data easier to see, check, and use. Some are public. Others run inside client work and are described here without details.
+      </p>
+    </div>
+
+    {kinds.map((kind) => {
+      const items = projects.filter((p) => p.data.kind === kind);
+      return items.length > 0 && (
+        <section class="group">
+          <h2>{kind}</h2>
+          <ul class="projects">
+            {items.map((p) => (
+              <li class="project">
+                <div>
+                  <h3>{p.data.detail ? <a href={`/software/${p.id}`}>{p.data.title}</a> : p.data.title}</h3>
+                  <span class="status" data-status={p.data.status}>{p.data.status}</span>
+                </div>
+                <div>
+                  <p>{p.data.summary}</p>
+                  {p.data.stack.length > 0 && <p class="meta">{p.data.stack.join(', ')}</p>}
+                  {(p.data.links.length > 0 || p.data.detail) && (
+                    <ul class="links">
+                      {p.data.detail && <li><a href={`/software/${p.id}`}>Read more</a></li>}
+                      {p.data.links.map((l) => <li><a href={l.url}>{l.label}</a></li>)}
+                    </ul>
+                  )}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      );
+    })}
+  </div>
+</Base>
