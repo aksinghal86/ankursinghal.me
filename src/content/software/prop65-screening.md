@@ -1,0 +1,8 @@
+---
+title: Proposition 65 product screening
+kind: Dashboards and data tools
+status: Client only
+summary: Software and screening methods that check product inventories of more than 100,000 items for Proposition 65-listed chemicals, for companies entering the California market or selling on e-commerce platforms.
+stack: [Python, SQL]
+order: 9
+---

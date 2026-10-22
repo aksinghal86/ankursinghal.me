@@ -1,9 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
-import { profile, education, societies, experience, otherWork, underReview, preprints, inPreparation, publications, presentations } from '../data/cv';
+import { profile, positions, selectedExperience, skills, education, societies, underReview, preprints, inPreparation, publications, presentations } from '../data/cv';
 ---
 
-<Base title="CV" description="Curriculum vitae of Ankur Singhal: experience, education, publications, and presentations.">
+<Base title="CV" description="Curriculum vitae of Ankur Singhal: positions, selected experience, skills, publications, and presentations.">
   <div class="wrap">
     <div class="page-head">
       <h1>Curriculum vitae</h1>
@@ -17,18 +17,28 @@ import { profile, education, societies, experience, otherWork, underReview, prep
       <h2>Profile</h2>
       {profile.map((p) => <p>{p}</p>)}
 
-      <h2>Experience</h2>
-      {experience.map((job) => (
+      <h2>Positions</h2>
+      {positions.map((job) => (
         <div class="cv-job">
-          <h3>{job.title}, {job.org}</h3>
-          <p class="when">{job.when}</p>
-          <ul>{job.bullets.map((b) => <li>{b}</li>)}</ul>
+          <h3>{job.title}</h3>
+          <p class="when">{job.org}, {job.when}</p>
+          {job.note && <p>{job.note}</p>}
         </div>
       ))}
 
-      <h2>Other selected work</h2>
-      <ul>{otherWork.map((w) => <li>{w}</li>)}</ul>
-      <p>Chemical-by-chemical descriptions of litigation and consulting work are on the <a href="/litigation">litigation page</a>, and software projects are on the <a href="/software">software page</a>.</p>
+      <h2>Selected experience</h2>
+      <ul>{selectedExperience.map((b) => <li>{b}</li>)}</ul>
+      <p>The <a href="/litigation">litigation page</a> describes this work by chemical, and the <a href="/software">software page</a> lists the tools.</p>
+
+      <h2>Technical skills</h2>
+      <dl class="plain-list">
+        {skills.map((s) => (
+          <>
+            <dt>{s.area}</dt>
+            <dd>{s.items}</dd>
+          </>
+        ))}
+      </dl>
 
       <h2>Education</h2>
       <ul>{education.map((e) => <li>{e.degree}, {e.school}, {e.year}</li>)}</ul>

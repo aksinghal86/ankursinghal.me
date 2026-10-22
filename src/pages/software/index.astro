@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 
 const projects = (await getCollection('software')).sort((a, b) => a.data.order - b.data.order);
-const kinds = ['Dashboards', 'Machine learning', 'AI and language models'] as const;
+const kinds = ['Dashboards and data tools', 'Machine learning', 'AI and language models'] as const;
 ---
 
 <Base
