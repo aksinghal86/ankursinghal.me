@@ -38,7 +38,9 @@ export const positions: Position[] = [
     when: '2019 to 2020',
     note: 'Founded a consulting company providing subcontractor services in industrial hygiene, Proposition 65 evaluations, exposure assessment, and litigation support. Also delivered ad hoc data analysis and full-stack software development for construction firms, utility providers, and consumer product manufacturers.',
   },
-  { title: 'Managing Scientist', org: 'Exponent, Inc.', when: '2013 to 2019' },
+  { title: 'Managing Scientist', org: 'Exponent, Inc.', when: '2017 to 2019' },
+  { title: 'Senior Scientist', org: 'Exponent, Inc.', when: '2015 to 2017' },
+  { title: 'Scientist', org: 'Exponent, Inc.', when: '2013 to 2015' },
 ];
 
 // Selected experience, by topic. Keep to chemicals and the kind of work; no clients, parties, or case figures.
