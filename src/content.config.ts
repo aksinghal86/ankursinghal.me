@@ -20,9 +20,11 @@ const software = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/software' }),
   schema: z.object({
     title: z.string(),
-    kind: z.enum(['Dashboards and data tools', 'Machine learning', 'AI and language models']),
+    kind: z.enum(['Dashboards and data tools', 'AI tools', 'AI integration and agents']),
     status: z.enum(['Live', 'Client only', 'In development']),
     summary: z.string(),
+    image: z.string().optional(),
+    imageAlt: z.string().default(''),
     stack: z.array(z.string()).default([]),
     links: z.array(z.object({ label: z.string(), url: z.string() })).default([]),
     order: z.number().default(100),

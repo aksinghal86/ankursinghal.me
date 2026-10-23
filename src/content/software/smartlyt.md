@@ -1,8 +1,10 @@
 ---
 title: smartlyt
-kind: Machine learning
+kind: AI tools
 status: Live
-summary: Groups PubMed search results into clusters of related papers, so a deep literature review starts from a few relevant islands instead of hundreds of unsorted abstracts.
+summary: An AI tool that groups PubMed search results into clusters of related papers, so a deep literature review starts from a few relevant islands instead of hundreds of unsorted abstracts.
+image: /img/software/smartlyt.webp
+imageAlt: "Screenshot of smartlyt showing clusters of PubMed articles"
 stack: [R, Shiny, TF-IDF, Hierarchical clustering]
 links:
   - label: Open the app

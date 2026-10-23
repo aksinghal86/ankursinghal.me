@@ -24,6 +24,7 @@ const d = project.data;
         </div>
       )}
     </div>
+    {d.image && <img class="detail-image" src={d.image} alt={d.imageAlt} width="640" height="480" />}
     <article class="article prose">
       <Content />
       {d.stack.length > 0 && <p class="meta">Built with {d.stack.join(', ')}.</p>}

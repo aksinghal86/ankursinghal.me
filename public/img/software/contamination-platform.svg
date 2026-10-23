@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Illustration of a map with sample locations sized by concentration">
+  <rect width="640" height="480" fill="#eaf0ee"/>
+  <g fill="none" stroke="#bcd3df" stroke-width="10" stroke-linecap="round">
+    <path d="M150 -10 C 190 90, 120 150, 210 230 S 330 330, 300 490"/>
+    <path d="M640 120 C 540 140, 500 200, 420 215 S 300 240, 210 230" stroke-width="7"/>
+    <path d="M470 -10 C 480 60, 560 90, 640 80" stroke-width="5"/>
+  </g>
+  <g fill="none" stroke="#d3dcda" stroke-width="2">
+    <path d="M0 330 L640 300"/><path d="M360 0 L330 480"/><path d="M0 90 L640 150"/>
+  </g>
+  <g fill="#2b6c8f" fill-opacity=".85" stroke="#fff" stroke-width="2.5">
+    <circle cx="205" cy="228" r="9"/><circle cx="262" cy="270" r="7"/><circle cx="118" cy="150" r="6"/>
+    <circle cx="395" cy="214" r="8"/><circle cx="470" cy="190" r="6"/><circle cx="310" cy="400" r="7"/><circle cx="520" cy="330" r="6"/>
+  </g>
+  <g fill="#c98a12" fill-opacity=".9" stroke="#fff" stroke-width="2.5">
+    <circle cx="232" cy="205" r="20"/><circle cx="300" cy="238" r="14"/><circle cx="165" cy="190" r="11"/><circle cx="352" cy="318" r="12"/>
+  </g>
+  <rect x="24" y="24" width="150" height="124" rx="6" fill="#fff" stroke="#d3dcda"/>
+  <g fill="#14232b" font-family="system-ui, sans-serif" font-size="13" font-weight="600">
+    <text x="40" y="52">Analyte</text><text x="40" y="104" font-weight="400" fill="#536269">Date range</text>
+  </g>
+  <rect x="40" y="62" width="118" height="22" rx="4" fill="#eaf0ee"/>
+  <rect x="40" y="112" width="118" height="22" rx="4" fill="#eaf0ee"/>
+  <g font-family="system-ui, sans-serif" font-size="12" fill="#536269">
+    <rect x="456" y="396" width="160" height="60" rx="6" fill="#fff" stroke="#d3dcda"/>
+    <text x="472" y="418" font-weight="600" fill="#14232b">Concentration</text>
+    <circle cx="480" cy="438" r="5" fill="#2b6c8f"/><circle cx="520" cy="438" r="9" fill="#c98a12"/><text x="540" y="442">higher</text>
+  </g>
+  <text x="24" y="462" font-family="system-ui, sans-serif" font-size="12" fill="#536269">Illustration. Not real data.</text>
+</svg>

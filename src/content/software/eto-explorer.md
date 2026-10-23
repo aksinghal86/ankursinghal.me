@@ -3,6 +3,8 @@ title: Ethylene Oxide Explorer
 kind: Dashboards and data tools
 status: Live
 summary: Maps ethylene oxide emissions reported by facilities and the cancer risks EPA estimated around them, and lets you compare facilities and compare EPA's two assessments side by side.
+image: /img/software/eto-explorer.webp
+imageAlt: "Screenshot of the Ethylene Oxide Explorer map"
 stack: [R, Shiny, GIS]
 links:
   - label: Open the dashboard

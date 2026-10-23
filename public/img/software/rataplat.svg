@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Illustration of a boulder with style tags such as crimp, sloper, and compression">
+  <rect width="640" height="480" fill="#eaf0ee"/>
+  <path d="M70 420 L120 250 C130 190 190 140 250 128 C310 112 380 92 440 120 C500 146 540 210 552 280 L580 420 Z" fill="#bcd3df"/>
+  <path d="M250 128 C230 200 240 300 215 420 M440 120 C420 200 450 300 430 420" fill="none" stroke="#9fbdcd" stroke-width="3"/>
+  <g fill="#2b6c8f"><circle cx="190" cy="360" r="11"/><circle cx="280" cy="300" r="9"/><circle cx="350" cy="240" r="13"/><circle cx="400" cy="170" r="9"/><circle cx="470" cy="300" r="10"/></g>
+  <path d="M190 360 L280 300 L350 240 L400 170" fill="none" stroke="#c98a12" stroke-width="3.5" stroke-dasharray="2 9" stroke-linecap="round"/>
+  <g font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#14232b">
+    <rect x="40" y="40" width="86" height="32" rx="16" fill="#fff" stroke="#d3dcda"/><text x="83" y="61" text-anchor="middle">crimp</text>
+    <rect x="140" y="40" width="96" height="32" rx="16" fill="#fff" stroke="#d3dcda"/><text x="188" y="61" text-anchor="middle">sloper</text>
+    <rect x="250" y="40" width="150" height="32" rx="16" fill="#fff" stroke="#d3dcda"/><text x="325" y="61" text-anchor="middle">compression</text>
+    <rect x="414" y="40" width="80" height="32" rx="16" fill="#c98a12"/><text x="454" y="61" text-anchor="middle" fill="#fff">prow</text>
+  </g>
+  <text x="40" y="458" font-family="system-ui, sans-serif" font-size="12" fill="#536269">Illustration.</text>
+</svg>
