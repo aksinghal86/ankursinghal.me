@@ -1,0 +1,43 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import avatar from '../assets/avatar.jpg';
+---
+
+<Base title="About" description="About Ankur Singhal: an exposure scientist who combines data analytics, machine learning, and software development.">
+  <div class="wrap">
+    <div class="page-head">
+      <h1>About</h1>
+    </div>
+    <div class="about-grid">
+      <div class="prose">
+        <p>
+          I am an exposure assessment professional with experience in data analytics, machine learning, and software development.
+          I put those together to answer questions about chemicals in the environment, and to build tools that let clients and the public see the risks that matter to them.
+        </p>
+        <p>
+          My day job is at Environmental Health &amp; Engineering (EH&amp;E), where I work on drinking water contamination, air emissions, lead, asbestos, and consumer product exposures, mostly for legal teams.
+          I started at EH&amp;E as a subcontractor on a lead exposure project in La Oroya, Peru, and joined full time after that.
+          Before that I worked at Exponent and ran my own consultancy.
+        </p>
+        <p>
+          My goal is to bring data science and software development to exposure assessment, a field that has been slow to adopt them.
+        </p>
+        <h2>Outside of work</h2>
+        <p>
+          I spend a lot of time climbing, pushing the limits of my body and mind, and enjoying the mountains on long peak-bagging and backpacking days.
+        </p>
+        <p>
+          <a href="/cv">Read the CV</a> or <a href="/contact">get in touch</a>.
+        </p>
+      </div>
+      <aside>
+        <Image src={avatar} alt="Ankur Singhal" width={544} height={544} />
+        <p>How to say my name</p>
+        <audio controls preload="none" src="/files/ankur-name.m4a">
+          <a href="/files/ankur-name.m4a">Download the recording</a>
+        </audio>
+      </aside>
+    </div>
+  </div>
+</Base>

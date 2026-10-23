@@ -1,0 +1,32 @@
+---
+import Base from '../layouts/Base.astro';
+import { underReview, preprints, inPreparation, publications, presentations } from '../data/cv';
+---
+
+<Base title="Research" description="Peer-reviewed publications, preprints, and conference presentations by Ankur Singhal.">
+  <div class="wrap">
+    <div class="page-head">
+      <h1>Research</h1>
+      <p class="lede">
+        Papers, preprints, and talks on exposure assessment, consumer product safety, and environmental data. The <a href="/cv">CV</a> has the same list with my work history.
+      </p>
+    </div>
+
+    <div class="cv">
+      <h2>Preprints and under review</h2>
+      <ul class="refs">
+        {preprints.map((p) => <li><a href={p.url}>{p.title}</a></li>)}
+        {underReview.map((p) => <li>{p}</li>)}
+      </ul>
+
+      <h2>In preparation</h2>
+      <ul class="refs">{inPreparation.map((p) => <li>{p}</li>)}</ul>
+
+      <h2>Publications</h2>
+      <ul class="refs">{publications.map((p) => <li>{p}</li>)}</ul>
+
+      <h2>Presentations and posters</h2>
+      <ul class="refs">{presentations.map((p) => <li>{p}</li>)}</ul>
+    </div>
+  </div>
+</Base>

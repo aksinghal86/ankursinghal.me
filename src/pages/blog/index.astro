@@ -1,0 +1,34 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+const posts = (await getCollection('blog', (p) => !p.data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+const fmt = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+
+<Base title="Blog" description="Writing on exposure science, environmental data, and building software, by Ankur Singhal.">
+  <div class="wrap">
+    <div class="page-head">
+      <h1>Blog</h1>
+      <p class="lede">Notes on exposure science, environmental data, and the tools I build.</p>
+    </div>
+
+    {posts.length === 0 ? (
+      <p class="prose">No posts yet. The first ones are on their way. <a href="/rss.xml">Subscribe by RSS</a> to get them.</p>
+    ) : (
+      <ul class="post-list">
+        {posts.map((p) => (
+          <li>
+            <time datetime={p.data.date.toISOString()}>{fmt.format(p.data.date)}</time>
+            <div>
+              <h2 style="margin:0 0 .25em;font-size:var(--step-1)"><a href={`/blog/${p.id}`} style="text-decoration:none;color:var(--ink)">{p.data.title}</a></h2>
+              <p>{p.data.description}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+</Base>

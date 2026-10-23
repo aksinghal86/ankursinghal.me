@@ -1,0 +1,51 @@
+---
+// Illustrative two-component decay (the shape of an emissions-decay model), drawn against a benchmark.
+// Not real data. The curve is computed here so the shape can be tuned in one place.
+const X0 = 60, X1 = 540, Y0 = 300, Y1 = 24; // plot box: x from 60 to 540, y baseline 300, top 24
+const T = 10; // time axis length, arbitrary units
+const bench = 0.2; // benchmark as a fraction of the starting concentration
+
+const conc = (t: number) => 0.6 * Math.exp(-t / 0.8) + 0.4 * Math.exp(-t / 5.5);
+const px = (t: number) => X0 + (t / T) * (X1 - X0);
+const py = (c: number) => Y0 - c * (Y0 - Y1);
+
+const pts: [number, number][] = [];
+for (let i = 0; i <= 120; i++) {
+  const t = (i / 120) * T;
+  pts.push([px(t), py(conc(t))]);
+}
+const line = pts.map(([x, y], i) => `${i ? 'L' : 'M'}${x.toFixed(1)} ${y.toFixed(1)}`).join(' ');
+
+// where the curve crosses the benchmark
+let tc = 0;
+for (let t = 0; t <= T; t += 0.001) {
+  if (conc(t) <= bench) { tc = t; break; }
+}
+const cx = px(tc), cy = py(bench);
+const above = pts.filter(([x]) => x <= cx);
+const area = `M${X0} ${cy.toFixed(1)} ` + above.map(([x, y]) => `L${x.toFixed(1)} ${y.toFixed(1)}`).join(' ') + ` L${cx.toFixed(1)} ${cy.toFixed(1)} Z`;
+---
+
+<figure class="chart">
+  <svg viewBox="0 0 560 350" role="img" aria-labelledby="chart-title chart-desc">
+    <title id="chart-title">Concentration falling over time, crossing a benchmark</title>
+    <desc id="chart-desc">An illustrative curve starting high and decaying quickly, then slowly. A dashed line marks a benchmark. The shaded region is the period when concentration is above the benchmark.</desc>
+
+    <line class="tick" x1={X0} x2={X1} y1={py(0.5)} y2={py(0.5)} />
+    <line class="tick" x1={X0} x2={X1} y1={py(1)} y2={py(1)} />
+
+    <path class="area" d={area} />
+    <line class="bench" x1={X0} x2={X1} y1={cy} y2={cy} />
+    <text class="bench-label" x={X1} y={cy - 9} text-anchor="end">Benchmark</text>
+
+    <path class="axis" d={`M${X0} ${Y1 - 6} V${Y0} H${X1}`} />
+    <path class="curve" d={line} pathLength="1" />
+
+    <circle class="cross" cx={cx} cy={cy} r="7" />
+    <text class="cross-label" x={cx + 16} y={cy - 14}>Falls below benchmark</text>
+
+    <text class="label" x={X0 - 12} y={(Y0 + Y1) / 2} text-anchor="middle" transform={`rotate(-90 ${X0 - 12} ${(Y0 + Y1) / 2})`}>Concentration</text>
+    <text class="label" x={(X0 + X1) / 2} y={Y0 + 40} text-anchor="middle">Time</text>
+  </svg>
+  <figcaption>Illustrative. Exposure questions often come down to how long a concentration stays above a benchmark, and how much of that time a person was there.</figcaption>
+</figure>
