@@ -29,6 +29,7 @@ export interface Position {
 }
 
 export const positions: Position[] = [
+  { title: 'Board Member', org: "Great Basin Unified Air Pollution Control District (GBUAPCD)", when: "2025 to present"}, 
   { title: 'Principal Scientist, Advanced Analytics', org: 'Environmental Health & Engineering, Inc. (EH&E)', when: '2024 to present' },
   { title: 'Senior Scientist, Advanced Analytics', org: 'Environmental Health & Engineering, Inc. (EH&E)', when: '2020 to 2024' },
   { title: 'Senior Analytics Scientist', org: 'Paustenbach and Associates', when: '2020' },
@@ -45,6 +46,9 @@ export const positions: Position[] = [
 
 // Selected experience, by topic. Keep to chemicals and the kind of work; no clients, parties, or case figures.
 export const selectedExperience = [
+  `Analyzed levels of 1,4-dioxane in municipality's drinking water along with evaluating potential sources of 1,4-dioxane with co-occurrence of associated chlorinated VOCs. Built a data pipeline of 100s of lab reports with analysis and visualizations on a dashboard to move the case forward. `, 
+  `Filed PFAS settlement claims for 1,800+ water systems, comprising 5,300+ distinct drinking water sources, serving 26 million people coast to coast, totaling more than $1.65 billion in claim value -- over 10% of the total settlement value across all the settlements. Built a system to collect data directly from water providers, evaluate lab reports and production records for eligibility, and track it all through a custom data pipeline and dashboards.`,
+  `Evaluated exposures to respirable crystalline silica (RCS) to workers from cutting and shaping engineered stone.`,
   `Led scientific support for litigation over lead in a community's drinking water. Analyzed several years of residential tap water samples, conducted exposure assessments, modeled estimated blood lead levels, and performed risk assessments.`,
   `Managed a multi-year effort, with a team of more than ten, to prepare and file drinking water claims for water providers across the U.S. in the national PFAS settlements with 3M, DuPont, Tyco, and BASF. Oversaw data collection and validation, and built a custom web platform to gather, manage, and visualize data for court filings and client engagement.`,
   `Led evaluations of PFAS (PFOA, PFOS, and short-chain compounds), including toxicology, epidemiology, transport and fate, and regulatory benchmarks such as EPA MCLs. Supported work on the largest drinking water settlement in U.S. history.`,

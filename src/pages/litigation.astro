@@ -15,20 +15,20 @@ const other = all.filter((c) => c.data.group === 'other');
     <div class="page-head">
       <h1>Litigation and expert work</h1>
       <p class="lede">
-        I assess exposure and risk from chemicals in water, air, and consumer products. I also support legal teams with the data analytics behind their cases.
+        I assess exposure and risk from chemicals in water, air, and consumer products. I also provide legal teams with data management and data analytics support for their cases.
       </p>
     </div>
 
     <div class="prose">
       <p>
-        This page describes the chemicals and the kind of work.
+        This page gives a snapshot of the evaluations I have conducted by chemical.
         My <a href="/cv">CV</a> has the full professional history.
       </p>
     </div>
 
     <h2>By chemical</h2>
     <div class="index" role="list">
-      <div class="index-head" aria-hidden="true"><span>Chemical</span><span>Medium</span><span>What I do</span></div>
+      <div class="index-head" aria-hidden="true"><span>Chemical</span><span>Medium</span><span>The work</span></div>
       {main.map((c) => (
         <div class="index-row" id={c.id} role="listitem">
           <h3>{c.data.chemical}</h3>
@@ -57,11 +57,11 @@ const other = all.filter((c) => c.data.group === 'other');
     </div>
     <dl class="plain-list">
       <dt>Intake and harmonization</dt>
-      <dd>Combining lab reports, spreadsheets, registry data, and monitoring data into one clean, documented dataset.</dd>
+      <dd>Combining data of all kinds, including lab reports, spreadsheets, and monitoring data, into one clean, documented dataset.</dd>
       <dt>Dashboards</dt>
-      <dd>Maps, charts, and tables that let a legal team explore the data and find the story themselves.</dd>
+      <dd>Maps, charts, and tables that let the legal team and experts explore the data and find the story themselves.</dd>
       <dt>Gap analysis</dt>
-      <dd>Finding what the data cannot yet support, and what would close the gap.</dd>
+      <dd>Finding what the data cannot yet support, and what would close the gap to make the case stronger.</dd>
       <dt>Follow-on recommendations</dt>
       <dd>Sampling and analysis plans, additional analyses, and next steps.</dd>
     </dl>
