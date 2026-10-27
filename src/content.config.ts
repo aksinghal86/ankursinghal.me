@@ -28,7 +28,6 @@ const software = defineCollection({
     stack: z.array(z.string()).default([]),
     links: z.array(z.object({ label: z.string(), url: z.string() })).default([]),
     order: z.number().default(100),
-    detail: z.boolean().default(false), // true = body is rendered on its own page
   }),
 });
 

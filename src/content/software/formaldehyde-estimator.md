@@ -14,7 +14,6 @@ links:
   - label: Paper in Risk Analysis
     url: https://onlinelibrary.wiley.com/doi/abs/10.1111/risa.12926
 order: 6
-detail: true
 ---
 
 The [Formaldehyde Emissions Estimator](https://aksinghal86.shinyapps.io/laminate-flooring-estimates) lets a homeowner estimate indoor air formaldehyde from laminate flooring based on the characteristics of their own house.

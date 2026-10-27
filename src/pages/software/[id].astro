@@ -3,7 +3,7 @@ import { getCollection, render } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 
 export async function getStaticPaths() {
-  const projects = await getCollection('software', (p) => p.data.detail);
+  const projects = await getCollection('software');
   return projects.map((p) => ({ params: { id: p.id }, props: { project: p } }));
 }
 
@@ -17,6 +17,7 @@ const d = project.data;
     <div class="page-head">
       <p class="byline"><a href="/software">Software and AI</a></p>
       <h1>{d.title}</h1>
+      <span class="status" data-status={d.status}>{d.status}</span>
       <p class="lede">{d.summary}</p>
       {d.links.length > 0 && (
         <div class="toolbar">

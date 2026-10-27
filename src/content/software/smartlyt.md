@@ -12,7 +12,6 @@ links:
   - label: Code on GitHub
     url: https://github.com/aksinghal86/smart-lit-search
 order: 1
-detail: true
 ---
 
 [smartlyt](https://aksinghal86.shinyapps.io/smartlyt) is an R Shiny app that clusters the results of a PubMed search.

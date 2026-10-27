@@ -7,7 +7,6 @@ const kinds = [
   { name: 'Litigation apps, dashboards, and data tools', blurb: 'Data platforms, dashboards, and apps that turn exposure and sampling data into something legal teams, experts, and the public can explore and check.' },
   { name: 'Software, AI tools, integration, and agents', blurb: 'Apps and tools that use language models and machine learning, and agents that connect models to real data and workflows.' },
 ] as const;
-const isExternal = (u: string) => /^https?:\/\//.test(u);
 ---
 
 <Base
@@ -35,31 +34,18 @@ const isExternal = (u: string) => /^https?:\/\//.test(u);
           <p class="group-blurb">{kind.blurb}</p>
           <ul class="projects">
             {items.map((p) => {
-              const href = p.data.detail ? `/software/${p.id}` : undefined;
+              const href = `/software/${p.id}`;
               return (
                 <li class="project">
                   {p.data.image && (
-                    href
-                      ? <a class="thumb-link" href={href} tabindex="-1" aria-hidden="true"><img class="thumb" src={p.data.image} alt="" width="640" height="480" loading="lazy" /></a>
-                      : <img class="thumb" src={p.data.image} alt={p.data.imageAlt} width="640" height="480" loading="lazy" />
+                    <a class="thumb-link" href={href} tabindex="-1" aria-hidden="true"><img class="thumb" src={p.data.image} alt="" width="640" height="480" loading="lazy" /></a>
                   )}
                   <div>
-                    <h3>{href ? <a href={href}>{p.data.title}</a> : p.data.title}</h3>
+                    <h3><a href={href}>{p.data.title}</a></h3>
                     <span class="status" data-status={p.data.status}>{p.data.status}</span>
                     <p>{p.data.summary}</p>
                     {p.data.stack.length > 0 && <p class="meta">{p.data.stack.join(', ')}</p>}
-                    {(p.data.links.length > 0 || p.data.detail) && (
-                      <ul class="links">
-                        {p.data.detail && <li><a href={href}>Read more</a></li>}
-                        {p.data.links.map((l) => (
-                          <li>
-                            <a href={l.url} {...(isExternal(l.url) ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
-                              {l.label}{isExternal(l.url) && <span class="sr-only"> (opens in a new tab)</span>}
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
+                    <p class="more"><a href={href}>Details<span class="sr-only"> on {p.data.title}</span></a></p>
                   </div>
                 </li>
               );

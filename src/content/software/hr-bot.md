@@ -8,3 +8,14 @@ imageAlt: "Illustration of a chat where a question is answered from a policy doc
 stack: [Python, Retrieval, LLM agents]
 order: 6
 ---
+Employees ask the same HR questions over and over, and the answers are already written down in policies and benefit documents that few people read.
+
+## How it works
+
+- Indexes the company's own HR policies, benefit guides, and procedures.
+- Answers questions in plain language, with a link to the passage the answer came from.
+- Hands off to a person when the documents do not cover the question.
+
+## Status
+
+In development.

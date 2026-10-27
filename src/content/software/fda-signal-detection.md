@@ -8,3 +8,15 @@ imageAlt: "Illustration of drug and adverse event pairs plotted against a signal
 stack: [Python, FAERS, Statistics, LLM agents]
 order: 3
 ---
+Legal teams want to know early when a medication starts to look linked to an adverse event. Most early signals turn out to be noise. The useful thing is to find the few that are not.
+
+## How it works
+
+- Pulls reports from the FDA Adverse Event Reporting System (FAERS).
+- Scores drug and event pairs for disproportionate reporting, using standard signal detection statistics.
+- Uses language model agents to check flagged pairs against the published literature.
+- Ends with a short list for a human reviewer, who decides what goes to the legal team.
+
+## Status
+
+In development.

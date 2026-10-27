@@ -12,7 +12,6 @@ links:
   - label: Code on GitHub
     url: https://github.com/ehe-analytics/ethylene-oxide/tree/main/dashboard
 order: 5
-detail: true
 ---
 
 [Ethylene Oxide Explorer](https://dashboards.theempiricalsolutions.com/p/eto-explorer-app) puts emissions reported to the Toxics Release Inventory (TRI) and EPA's modeled cancer risks on one map. You can compare emissions between facilities and over time, and see the underlying data in a table.
