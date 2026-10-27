@@ -21,11 +21,11 @@ const isExternal = (u: string) => /^https?:\/\//.test(u);
         I develop AI tools, integrate language models into analysis and reporting workflows, build agents and MCP servers, and make the dashboards and data pipelines underneath them.
       </p>
     </div>
-    <div class="prose">
+    <!-- <div class="prose">
       <p class="meta">
         Public projects show screenshots. Client work is described without details, and its thumbnail is an illustration, not the real thing.
       </p>
-    </div>
+    </div> -->
 
     {kinds.map((kind) => {
       const items = projects.filter((p) => p.data.kind === kind.name);
