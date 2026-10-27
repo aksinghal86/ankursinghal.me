@@ -1,6 +1,6 @@
 ---
 title: smartlyt
-kind: AI tools, integration, and agents
+kind: Software, AI tools, integration, and agents
 status: Live
 summary: An AI tool that groups PubMed search results into clusters of related papers, so a deep literature review starts from a few relevant islands instead of hundreds of unsorted abstracts.
 image: /img/software/smartlyt.webp

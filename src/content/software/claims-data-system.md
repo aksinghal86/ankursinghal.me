@@ -1,6 +1,6 @@
 ---
 title: Claims data system for public water systems
-kind: Apps, dashboards, and data tools
+kind: Litigation apps, dashboards, and data tools
 status: Client only
 summary: An online intake tool, data pipeline, and dashboards that collected data from large numbers of water providers and screened lab reports and production data for eligibility in the AFFF settlements.
 image: /img/software/claims-data-system.svg

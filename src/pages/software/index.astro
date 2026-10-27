@@ -4,8 +4,8 @@ import Base from '../../layouts/Base.astro';
 
 const projects = (await getCollection('software')).sort((a, b) => a.data.order - b.data.order);
 const kinds = [
-  { name: 'Apps, dashboards, and data tools', blurb: 'Interactive maps, charts, and apps that turn exposure and field data into something a person can explore.' },
-  { name: 'AI tools, integration, and agents', blurb: 'Tools that use language models and machine learning to find structure in text and data, and agents that connect models to real data and workflows.' },
+  { name: 'Litigation apps, dashboards, and data tools', blurb: 'Data platforms, dashboards, and apps that turn exposure and sampling data into something legal teams, experts, and the public can explore and check.' },
+  { name: 'Software, AI tools, integration, and agents', blurb: 'Apps and tools that use language models and machine learning, and agents that connect models to real data and workflows.' },
 ] as const;
 const isExternal = (u: string) => /^https?:\/\//.test(u);
 ---

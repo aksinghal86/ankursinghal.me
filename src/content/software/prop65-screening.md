@@ -1,6 +1,6 @@
 ---
 title: Proposition 65 product screening
-kind: Apps, dashboards, and data tools
+kind: Litigation apps, dashboards, and data tools
 status: Client only
 summary: Software and screening methods that check product inventories of more than 100,000 items for Proposition 65-listed chemicals, for companies entering the California market or selling on e-commerce platforms.
 image: /img/software/prop65-screening.svg
