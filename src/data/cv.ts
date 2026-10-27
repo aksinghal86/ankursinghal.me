@@ -93,13 +93,13 @@ export const inPreparation = [
 ];
 
 export const publications = [
-  'Bogen KT, Lewis RC, Singhal A, Sheehan P. 2020. Development of a novel method for estimating dermal contact with hand-applied cleaning solutions. Environmental Monitoring and Assessment 192(3):157.',
+  'Bogen KT, Lewis RC, Singhal A, Sheehan P. 2020. Development of a novel method for estimating dermal contact with hand-applied cleaning solutions. Environmental Monitoring and Assessment 192(3):157. doi:10.1007/s10661-019-7929-7',
   'Sheehan P, Singhal A, Bogen KT, MacIntosh D, Kalmes RM, McCarthy J. 2018. Potential exposure and cancer risk from formaldehyde emissions from installed Chinese manufactured laminate flooring. Risk Analysis 38(6):1128-1142. doi:10.1111/risa.12926',
   'Singhal A, Posson M, Kalmes R, Gauthier A, Lewis R, Schenk J, Goswami E, Sheehan P. 2018. Proposition (Prop) 65 risk assessment. In: Hart GA (Ed), Professional Practices of Product Stewardship (pp. 423-427). Falls Church, VA: Product Stewardship Society.',
   'Singhal A, Bogen KT, Sheehan P. 2018. Wearable devices. In: Hart GA (Ed), Professional Practices of Product Stewardship (pp. 428-433). Falls Church, VA: Product Stewardship Society.',
   'Bogen KT, Singhal A. 2017. Malathion dermal permeability in relation to dermal load: assessment by physiologically based pharmacokinetic modeling of in vivo human data. Journal of Environmental Science and Health, Part B 52(2):138-146. doi:10.1080/03601234.2016.1248150',
-  'Marconett CN, Singhal A, Sundar SN, Firestone GL. 2012. Indole-3-carbinol disrupts estrogen receptor-alpha dependent expression of insulin-like growth factor-1 receptor and insulin receptor substrate-1 and proliferation of human breast cancer cells. Molecular and Cellular Endocrinology 363:74-84.',
-  'Marconett CN, Morgenstern TJ, San Ramon AK, Sundar SN, Singhal A, Firestone GL. 2010. BZL101, a phytochemical extract from Scutellaria barbata plant, disrupts proliferation of human breast and prostate cancer cells through distinct mechanisms dependent on the cancer cell phenotype. Cancer Biology and Therapy 10(4):397-405.',
+  'Marconett CN, Singhal A, Sundar SN, Firestone GL. 2012. Indole-3-carbinol disrupts estrogen receptor-alpha dependent expression of insulin-like growth factor-1 receptor and insulin receptor substrate-1 and proliferation of human breast cancer cells. Molecular and Cellular Endocrinology 363(1-2):74-84. doi:10.1016/j.mce.2012.07.008',
+  'Marconett CN, Morgenstern TJ, San Roman AK, Sundar SN, Singhal A, Firestone GL. 2010. BZL101, a phytochemical extract from Scutellaria barbata plant, disrupts proliferation of human breast and prostate cancer cells through distinct mechanisms dependent on the cancer cell phenotype. Cancer Biology and Therapy 10(4):397-405. doi:10.4161/cbt.10.4.12424',
 ];
 
 export const presentations = [

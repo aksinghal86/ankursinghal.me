@@ -16,7 +16,22 @@ const {
 } = Astro.props;
 
 const fullTitle = title ? `${title} | Ankur Singhal` : 'Ankur Singhal, exposure scientist';
-const canonical = new URL(Astro.url.pathname, Astro.site);
+// Pages are built as about.html etc. but served without the extension, so the canonical drops it.
+const cleanPath = Astro.url.pathname.replace(/\.html$/, '').replace(/\/index$/, '') || '/';
+const canonical = new URL(cleanPath, Astro.site);
+const ogImage = new URL('/img/og-card.png', Astro.site);
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Ankur Singhal',
+  url: 'https://www.ankursinghal.me',
+  image: new URL('/img/og-card.png', Astro.site).href,
+  jobTitle: 'Principal Scientist',
+  worksFor: { '@type': 'Organization', name: 'Environmental Health & Engineering (EH&E)', url: 'https://www.eheinc.com' },
+  knowsAbout: ['Exposure assessment', 'Risk assessment', 'Environmental data analysis', 'PFAS', '1,4-Dioxane', 'Ethylene oxide', 'Lead', 'Respirable crystalline silica', 'Data pipelines', 'AI tools and agents'],
+  sameAs: ['https://linkedin.com/in/ankursing', 'https://github.com/aksinghal86'],
+};
+const showPerson = cleanPath === '/' || cleanPath === '/about';
 ---
 
 <!doctype html>
@@ -34,7 +49,12 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:description" content={description} />
     <meta property="og:type" content={type} />
     <meta property="og:url" content={canonical} />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Ankur Singhal: exposure science, data, and AI" />
+    <meta name="twitter:card" content="summary_large_image" />
+    {showPerson && <script type="application/ld+json" set:html={JSON.stringify(person)} />}
     <slot name="head" />
   </head>
   <body>

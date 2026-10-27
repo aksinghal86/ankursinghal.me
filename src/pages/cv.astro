@@ -1,6 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
 import { profile, positions, selectedExperience, skills, education, societies, underReview, preprints, inPreparation, publications, presentations } from '../data/cv';
+const withDoi = (s: string) => {
+  const m = s.match(/^(.*?)\s*doi:(\S+)$/);
+  return m ? { text: m[1], doi: m[2] } : { text: s, doi: null };
+};
 ---
 
 <Base title="CV" description="Curriculum vitae of Ankur Singhal: positions, selected experience, skills, publications, and presentations.">
@@ -47,7 +51,17 @@ import { profile, positions, selectedExperience, skills, education, societies, u
       <ul>{societies.map((s) => <li>{s}</li>)}</ul>
 
       <h2>Publications</h2>
-      <ul class="refs">{publications.map((p) => <li>{p}</li>)}</ul>
+      <ul class="refs">
+        {publications.map((p) => {
+          const r = withDoi(p);
+          return (
+            <li>
+              {r.text}
+              {r.doi && <> <a href={`https://doi.org/${r.doi}`} target="_blank" rel="noopener noreferrer">doi:{r.doi}<span class="sr-only"> (opens in a new tab)</span></a></>}
+            </li>
+          );
+        })}
+      </ul>
 
       <h3>Preprints</h3>
       <ul class="refs">

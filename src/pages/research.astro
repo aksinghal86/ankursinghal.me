@@ -1,6 +1,10 @@
 ---
 import Base from '../layouts/Base.astro';
 import { underReview, preprints, inPreparation, publications, presentations } from '../data/cv';
+const withDoi = (s: string) => {
+  const m = s.match(/^(.*?)\s*doi:(\S+)$/);
+  return m ? { text: m[1], doi: m[2] } : { text: s, doi: null };
+};
 ---
 
 <Base title="Research" description="Peer-reviewed publications, preprints, and conference presentations by Ankur Singhal, on exposure assessment and environmental data.">
@@ -25,7 +29,17 @@ import { underReview, preprints, inPreparation, publications, presentations } fr
       <ul class="refs">{inPreparation.map((p) => <li>{p}</li>)}</ul>
 
       <h2>Publications</h2>
-      <ul class="refs">{publications.map((p) => <li>{p}</li>)}</ul>
+      <ul class="refs">
+        {publications.map((p) => {
+          const r = withDoi(p);
+          return (
+            <li>
+              {r.text}
+              {r.doi && <> <a href={`https://doi.org/${r.doi}`} target="_blank" rel="noopener noreferrer">doi:{r.doi}<span class="sr-only"> (opens in a new tab)</span></a></>}
+            </li>
+          );
+        })}
+      </ul>
 
       <h2>Presentations and posters</h2>
       <ul class="refs">{presentations.map((p) => <li>{p}</li>)}</ul>
