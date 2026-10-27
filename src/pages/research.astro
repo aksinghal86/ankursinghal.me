@@ -1,22 +1,17 @@
 ---
 import Base from '../layouts/Base.astro';
-import DecayChart from '../components/DecayChart.astro';
 import { underReview, preprints, inPreparation, publications, presentations } from '../data/cv';
 ---
 
 <Base title="Research" description="Peer-reviewed publications, preprints, and conference presentations by Ankur Singhal, on exposure assessment and environmental data.">
-  <section class="hero hero-first">
-    <div class="wrap">
-      <div>
-        <h1>Who was exposed, to what, and how much?</h1>
-        <p>
-          That is the question behind nearly all of my work, in litigation, regulation, and research.
-          I answer it with sampling, models, and data. The papers, preprints, and talks below are where that work is written down.
-        </p>
-      </div>
-      <DecayChart />
+  <div class="wrap">
+    <div class="page-head">
+      <h1>Research</h1>
+      <p class="lede">
+        Papers, preprints, and talks on exposure assessment, consumer product safety, and environmental data. The <a href="/cv">CV</a> has the same list with my work history.
+      </p>
     </div>
-  </section>
+  </div>
 
   <div class="wrap">
     <div class="cv">

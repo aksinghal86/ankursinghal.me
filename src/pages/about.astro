@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 import avatar from '../assets/avatar.jpg';
+import DecayChart from '../components/DecayChart.astro';
 ---
 
 <Base title="About" description="About Ankur Singhal: an exposure scientist who combines data analytics, machine learning, and software development.">
@@ -12,20 +13,30 @@ import avatar from '../assets/avatar.jpg';
     <div class="about-grid">
       <div class="prose">
         <p>
-          I am an exposure assessment professional with experience in data analytics, machine learning, and software development.
-          I put those together to answer questions about chemicals in the environment, and to build tools that let clients and the public see the risks that matter to them.
+          I am an exposure scientist who came up through toxicology, consumer product safety, and risk assessment, and found that the hard part of the work is usually the data.
+          So I learned to code, and then to build software. Most of what I do now sits between the three.
         </p>
         <p>
-          My day job is at Environmental Health &amp; Engineering (EH&amp;E), where I work on drinking water contamination, air emissions, lead, asbestos, and consumer product exposures, mostly for legal teams.
           I started at EH&amp;E as a subcontractor on a lead exposure project in La Oroya, Peru, and joined full time after that.
-          Before that I worked at Exponent and ran my own consultancy.
+          Before that I worked at Exponent, first as a scientist and then as a managing scientist, and ran my own consultancy.
+          Today I work on drinking water contamination, air emissions, lead, asbestos, and consumer product exposures, mostly for legal teams.
         </p>
+
+        <h2>The question behind the work</h2>
+        <p>
+          Nearly every project starts the same way: who was exposed, to what, and how much?
+          I answer it with sampling, models, and data, and increasingly with tools that let clients check the answer themselves.
+        </p>
+        <DecayChart />
+
         <p>
           My goal is to bring data science and software development to exposure assessment, a field that has been slow to adopt them.
         </p>
+
         <h2>Outside of work</h2>
         <p>
           I spend a lot of time climbing, pushing the limits of my body and mind, and enjoying the mountains on long peak-bagging and backpacking days.
+          I also play guitar, and I am converting a van into a place to live and travel in.
         </p>
         <p>
           <a href="/cv">Read the CV</a> or <a href="/contact">get in touch</a>.
