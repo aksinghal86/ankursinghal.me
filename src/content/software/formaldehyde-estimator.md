@@ -1,6 +1,6 @@
 ---
 title: Formaldehyde Emissions Estimator
-kind: Dashboards and data tools
+kind: Apps, dashboards, and data tools
 status: Live
 summary: Estimates indoor air formaldehyde from laminate flooring for a specific home, using the emissions-decay model from our published study. It was my first Shiny app.
 image: /img/software/formaldehyde-estimator.webp
@@ -13,7 +13,7 @@ links:
     url: https://github.com/aksinghal86/laminate-flooring-estimates
   - label: Paper in Risk Analysis
     url: https://onlinelibrary.wiley.com/doi/abs/10.1111/risa.12926
-order: 2
+order: 6
 detail: true
 ---
 

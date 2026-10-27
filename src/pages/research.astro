@@ -1,21 +1,28 @@
 ---
 import Base from '../layouts/Base.astro';
+import DecayChart from '../components/DecayChart.astro';
 import { underReview, preprints, inPreparation, publications, presentations } from '../data/cv';
 ---
 
-<Base title="Research" description="Peer-reviewed publications, preprints, and conference presentations by Ankur Singhal.">
-  <div class="wrap">
-    <div class="page-head">
-      <h1>Research</h1>
-      <p class="lede">
-        Papers, preprints, and talks on exposure assessment, consumer product safety, and environmental data. The <a href="/cv">CV</a> has the same list with my work history.
-      </p>
+<Base title="Research" description="Peer-reviewed publications, preprints, and conference presentations by Ankur Singhal, on exposure assessment and environmental data.">
+  <section class="hero hero-first">
+    <div class="wrap">
+      <div>
+        <h1>Who was exposed, to what, and how much?</h1>
+        <p>
+          That is the question behind nearly all of my work, in litigation, regulation, and research.
+          I answer it with sampling, models, and data. The papers, preprints, and talks below are where that work is written down.
+        </p>
+      </div>
+      <DecayChart />
     </div>
+  </section>
 
+  <div class="wrap">
     <div class="cv">
       <h2>Preprints and under review</h2>
       <ul class="refs">
-        {preprints.map((p) => <li><a href={p.url}>{p.title}</a></li>)}
+        {preprints.map((p) => <li><a href={p.url} target="_blank" rel="noopener noreferrer">{p.title}<span class="sr-only"> (opens in a new tab)</span></a></li>)}
         {underReview.map((p) => <li>{p}</li>)}
       </ul>
 
@@ -27,6 +34,8 @@ import { underReview, preprints, inPreparation, publications, presentations } fr
 
       <h2>Presentations and posters</h2>
       <ul class="refs">{presentations.map((p) => <li>{p}</li>)}</ul>
+
+      <p>The <a href="/cv">CV</a> has the same list alongside my work history.</p>
     </div>
   </div>
 </Base>

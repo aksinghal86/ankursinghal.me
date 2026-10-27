@@ -20,7 +20,7 @@ const software = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/software' }),
   schema: z.object({
     title: z.string(),
-    kind: z.enum(['Dashboards and data tools', 'AI tools', 'AI integration and agents']),
+    kind: z.enum(['Apps, dashboards, and data tools', 'AI tools, integration, and agents']),
     status: z.enum(['Live', 'Client only', 'In development']),
     summary: z.string(),
     image: z.string().optional(),

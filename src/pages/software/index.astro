@@ -4,15 +4,15 @@ import Base from '../../layouts/Base.astro';
 
 const projects = (await getCollection('software')).sort((a, b) => a.data.order - b.data.order);
 const kinds = [
-  { name: 'Dashboards and data tools', blurb: 'Interactive maps, charts, and pipelines that turn exposure data into something a person can explore.' },
-  { name: 'AI tools', blurb: 'Tools that use machine learning and language models to find structure in text and data.' },
-  { name: 'AI integration and agents', blurb: 'Connecting language models to real data and workflows: agents, MCP servers, and review pipelines.' },
+  { name: 'Apps, dashboards, and data tools', blurb: 'Interactive maps, charts, and apps that turn exposure and field data into something a person can explore.' },
+  { name: 'AI tools, integration, and agents', blurb: 'Tools that use language models and machine learning to find structure in text and data, and agents that connect models to real data and workflows.' },
 ] as const;
+const isExternal = (u: string) => /^https?:\/\//.test(u);
 ---
 
 <Base
   title="Software and AI"
-  description="Dashboards, AI tools, and AI integration work by Ankur Singhal: agents, MCP servers, language model workflows, and data pipelines."
+  description="Apps, dashboards, AI tools, and agents by Ankur Singhal: language model workflows, MCP servers, and data pipelines."
 >
   <div class="wrap">
     <div class="page-head">
@@ -51,7 +51,13 @@ const kinds = [
                     {(p.data.links.length > 0 || p.data.detail) && (
                       <ul class="links">
                         {p.data.detail && <li><a href={href}>Read more</a></li>}
-                        {p.data.links.map((l) => <li><a href={l.url}>{l.label}</a></li>)}
+                        {p.data.links.map((l) => (
+                          <li>
+                            <a href={l.url} {...(isExternal(l.url) ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>
+                              {l.label}{isExternal(l.url) && <span class="sr-only"> (opens in a new tab)</span>}
+                            </a>
+                          </li>
+                        ))}
                       </ul>
                     )}
                   </div>

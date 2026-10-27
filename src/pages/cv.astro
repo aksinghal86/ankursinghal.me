@@ -51,7 +51,7 @@ import { profile, positions, selectedExperience, skills, education, societies, u
 
       <h3>Preprints</h3>
       <ul class="refs">
-        {preprints.map((p) => <li><a href={p.url}>{p.title}</a></li>)}
+        {preprints.map((p) => <li><a href={p.url} target="_blank" rel="noopener noreferrer">{p.title}<span class="sr-only"> (opens in a new tab)</span></a></li>)}
       </ul>
 
       <h3>Under review</h3>

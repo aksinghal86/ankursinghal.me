@@ -20,7 +20,11 @@ const d = project.data;
       <p class="lede">{d.summary}</p>
       {d.links.length > 0 && (
         <div class="toolbar">
-          {d.links.map((l, i) => <a class={i === 0 ? 'btn' : 'btn quiet'} href={l.url}>{l.label}</a>)}
+          {d.links.map((l, i) => (
+            <a class={i === 0 ? 'btn' : 'btn quiet'} href={l.url} target="_blank" rel="noopener noreferrer">
+              {l.label}<span class="sr-only"> (opens in a new tab)</span>
+            </a>
+          ))}
         </div>
       )}
     </div>
