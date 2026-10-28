@@ -33,7 +33,7 @@ const other = all.filter((c) => c.data.group === 'other');
         <div class="index-row" id={c.id} role="listitem">
           <h3>{c.data.chemical}</h3>
           <div class="medium">{c.data.medium}</div>
-          <p>{c.data.summary}</p>
+          <div class="summary">{c.data.summary.split(/\n\s*\n|\n/).map((t) => t.trim()).filter(Boolean).map((t) => <p>{t}</p>)}</div>
         </div>
       ))}
     </div>
@@ -44,7 +44,7 @@ const other = all.filter((c) => c.data.group === 'other');
         <div class="index-row" id={c.id} role="listitem">
           <h3>{c.data.chemical}</h3>
           <div class="medium">{c.data.medium}</div>
-          <p>{c.data.summary}</p>
+          <div class="summary">{c.data.summary.split(/\n\s*\n|\n/).map((t) => t.trim()).filter(Boolean).map((t) => <p>{t}</p>)}</div>
         </div>
       ))}
     </div>

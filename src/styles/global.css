@@ -196,6 +196,7 @@ hr { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0; }
 .index-row h3 { margin: 0; font-size: var(--step-1); }
 .index-row .medium { font-family: var(--font-ui); font-size: var(--step--1); color: var(--muted); padding-top: 0.3rem; }
 .index-row p { margin: 0; max-width: 36rem; }
+.index-row .summary p + p { margin-top: 0.8em; }
 .index-head { display: none; font-family: var(--font-ui); font-size: var(--step--1); color: var(--muted); padding-block: 0.6rem; border-bottom: 1px solid var(--rule); gap: 2.5rem; }
 @media (min-width: 52rem) { .index-head { display: grid; grid-template-columns: 14rem 9rem 1fr; } }
 
