@@ -38,7 +38,7 @@ So we treated it as a data problem from the start. We built:
 - A data pipeline that standardizes records from systems that keep them in very different ways.
 - Dashboards that track every system and every source, so we could see where each claim stood and what was still missing.
 
-None of that replaced the people. Behind it were hundreds of calls with water providers, a lot of document review, and judgment calls about what each system's data actually showed and what it could support. [YOUR EXPERIENCE: one concrete example of a judgment call or a records problem, anonymized, if you want one here.] What the infrastructure did was make that judgment consistent across nearly two thousand systems, and let a team of about ten keep track of it all.
+None of that replaced the people. Behind it were hundreds of calls with water providers, a lot of document review, and judgment calls about what each system's data actually showed and what it could support. [YOUR EXPERIENCE: one concrete example of a judgment call or a records problem, anonymized, if you want one here.] What the infrastructure did was make that judgment consistent across more than 1,800 systems, and let a team of more than ten people keep track of it all.
 
 ## What the data can't tell you
 
