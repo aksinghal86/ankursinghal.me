@@ -27,6 +27,7 @@ const software = defineCollection({
     imageAlt: z.string().default(''),
     stack: z.array(z.string()).default([]),
     links: z.array(z.object({ label: z.string(), url: z.string() })).default([]),
+    hidden: z.boolean().default(false), // true = kept in the repo but not shown on the site
     order: z.number().default(100),
   }),
 });

@@ -7,6 +7,7 @@ image: /img/software/fda-signal-detection.svg
 imageAlt: "Illustration of drug and adverse event pairs plotted against a signal threshold"
 stack: [Python, FAERS, Statistics, LLM agents]
 order: 3
+hidden: true
 ---
 Legal teams want to know early when a medication starts to look linked to an adverse event. Most early signals turn out to be noise. The useful thing is to find the few that are not.
 
