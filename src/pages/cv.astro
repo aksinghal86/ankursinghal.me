@@ -1,0 +1,85 @@
+---
+import Base from '../layouts/Base.astro';
+import { profile, positions, selectedExperience, skills, education, societies, underReview, preprints, inPreparation, publications, presentations } from '../data/cv';
+const withDoi = (s: string) => {
+  const m = s.match(/^(.*?)\s*doi:(\S+)$/);
+  return m ? { text: m[1], doi: m[2] } : { text: s, doi: null };
+};
+---
+
+<Base title="CV" description="Curriculum vitae of Ankur Singhal: positions, selected experience, skills, publications, and presentations.">
+  <div class="wrap">
+    <div class="page-head">
+      <h1>Curriculum vitae</h1>
+      <div class="toolbar">
+        <button class="btn" type="button" id="print">Print or save as PDF</button>
+        <a class="btn quiet" href="/contact">Contact me</a>
+      </div>
+    </div>
+
+    <div class="cv">
+      <h2>Profile</h2>
+      {profile.map((p) => <p>{p}</p>)}
+
+      <h2>Positions</h2>
+      {positions.map((job) => (
+        <div class="cv-job">
+          <h3>{job.title}</h3>
+          <p class="when">{job.org}, {job.when}</p>
+          {job.note && <p>{job.note}</p>}
+        </div>
+      ))}
+
+      <h2>Selected experience</h2>
+      <ul>{selectedExperience.map((b) => <li>{b}</li>)}</ul>
+      <p>The <a href="/litigation">litigation page</a> describes this work by chemical, and the <a href="/software">software page</a> lists the tools.</p>
+
+      <h2>Technical skills</h2>
+      <dl class="plain-list">
+        {skills.map((s) => (
+          <>
+            <dt>{s.area}</dt>
+            <dd>{s.items}</dd>
+          </>
+        ))}
+      </dl>
+
+      <h2>Education</h2>
+      <ul>{education.map((e) => <li>{e.degree}, {e.school}, {e.year}</li>)}</ul>
+
+      <h2>Professional societies</h2>
+      <ul>{societies.map((s) => <li>{s}</li>)}</ul>
+
+      <h2>Publications</h2>
+      <ul class="refs">
+        {publications.map((p) => {
+          const r = withDoi(p);
+          return (
+            <li>
+              {r.text}
+              {r.doi && <> <a href={`https://doi.org/${r.doi}`} target="_blank" rel="noopener noreferrer">doi:{r.doi}<span class="sr-only"> (opens in a new tab)</span></a></>}
+            </li>
+          );
+        })}
+      </ul>
+
+      <h3>Preprints</h3>
+      <ul class="refs">
+        {preprints.map((p) => <li><a href={p.url} target="_blank" rel="noopener noreferrer">{p.title}<span class="sr-only"> (opens in a new tab)</span></a></li>)}
+      </ul>
+
+      <h3>Under review</h3>
+      <ul class="refs">{underReview.map((p) => <li>{p}</li>)}</ul>
+
+      <h3>In preparation</h3>
+      <ul class="refs">{inPreparation.map((p) => <li>{p}</li>)}</ul>
+
+      <h2>Presentations and posters</h2>
+      <ul class="refs">{presentations.map((p) => <li>{p}</li>)}</ul>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('print')?.addEventListener('click', () => window.print());
+  </script>
+</Base>

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-label="Illustration of predicted win totals compared with market lines">
+  <rect width="640" height="480" fill="#eaf0ee"/>
+  <text x="40" y="90" font-family="system-ui, sans-serif" font-size="14" fill="#536269">Team A</text>
+  <rect x="130" y="70" width="345.0" height="26" rx="4" fill="#2b6c8f"/>
+  <path d="M445.0 64 V102" stroke="#c98a12" stroke-width="3"/>
+  <text x="40" y="142" font-family="system-ui, sans-serif" font-size="14" fill="#536269">Team B</text>
+  <rect x="130" y="122" width="300.0" height="26" rx="4" fill="#2b6c8f"/>
+  <path d="M445.0 116 V154" stroke="#c98a12" stroke-width="3"/>
+  <text x="40" y="194" font-family="system-ui, sans-serif" font-size="14" fill="#536269">Team C</text>
+  <rect x="130" y="174" width="270.0" height="26" rx="4" fill="#2b6c8f"/>
+  <path d="M385.0 168 V206" stroke="#c98a12" stroke-width="3"/>
+  <text x="40" y="246" font-family="system-ui, sans-serif" font-size="14" fill="#536269">Team D</text>
+  <rect x="130" y="226" width="240.0" height="26" rx="4" fill="#2b6c8f"/>
+  <path d="M400.0 220 V258" stroke="#c98a12" stroke-width="3"/>
+  <text x="40" y="298" font-family="system-ui, sans-serif" font-size="14" fill="#536269">Team E</text>
+  <rect x="130" y="278" width="195.0" height="26" rx="4" fill="#2b6c8f"/>
+  <path d="M355.0 272 V310" stroke="#c98a12" stroke-width="3"/>
+  <text x="40" y="350" font-family="system-ui, sans-serif" font-size="14" fill="#536269">Team F</text>
+  <rect x="130" y="330" width="150.0" height="26" rx="4" fill="#2b6c8f"/>
+  <path d="M310.0 324 V362" stroke="#c98a12" stroke-width="3"/>
+  <g font-family="system-ui, sans-serif" font-size="14" fill="#14232b">
+    <rect x="130" y="402" width="26" height="14" rx="3" fill="#2b6c8f"/><text x="164" y="414">Model win total</text>
+    <path d="M300 396 V422" stroke="#c98a12" stroke-width="3"/><text x="312" y="414">Market line</text>
+    <text x="40" y="458" font-size="12" fill="#536269">Illustration. Placeholder teams and numbers.</text>
+  </g>
+</svg>

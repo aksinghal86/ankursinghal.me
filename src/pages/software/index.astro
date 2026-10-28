@@ -1,0 +1,58 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+const projects = (await getCollection('software', (p) => !p.data.hidden)).sort((a, b) => a.data.order - b.data.order);
+const kinds = [
+  { name: 'Litigation apps, dashboards, and data tools', blurb: 'Data platforms, dashboards, and apps that turn exposure and sampling data into something legal teams, experts, and the public can explore and check.' },
+  { name: 'Software, AI tools, integration, and agents', blurb: 'Apps and tools that use language models and machine learning, and agents that connect models to real data and workflows.' },
+] as const;
+---
+
+<Base
+  title="Software and AI"
+  description="Apps, dashboards, AI tools, and agents by Ankur Singhal: language model workflows, MCP servers, and data pipelines."
+>
+  <div class="wrap">
+    <div class="page-head">
+      <h1>Software and AI</h1>
+      <p class="lede">
+        I develop AI tools, integrate language models into analysis and reporting workflows, build agents and MCP servers, and make the dashboards and data pipelines underneath them.
+      </p>
+    </div>
+    <!-- <div class="prose">
+      <p class="meta">
+        Public projects show screenshots. Client work is described without details, and its thumbnail is an illustration, not the real thing.
+      </p>
+    </div> -->
+
+    {kinds.map((kind) => {
+      const items = projects.filter((p) => p.data.kind === kind.name);
+      return items.length > 0 && (
+        <section class="group">
+          <h2>{kind.name}</h2>
+          <p class="group-blurb">{kind.blurb}</p>
+          <ul class="projects">
+            {items.map((p) => {
+              const href = `/software/${p.id}`;
+              return (
+                <li class="project">
+                  {p.data.image && (
+                    <a class="thumb-link" href={href} tabindex="-1" aria-hidden="true"><img class="thumb" src={p.data.image} alt="" width="640" height="480" loading="lazy" /></a>
+                  )}
+                  <div>
+                    <h3><a href={href}>{p.data.title}</a></h3>
+                    <span class="status" data-status={p.data.status}>{p.data.status}</span>
+                    <p>{p.data.summary}</p>
+                    {p.data.stack.length > 0 && <p class="meta">{p.data.stack.join(', ')}</p>}
+                    <p class="more"><a href={href}>Details<span class="sr-only"> on {p.data.title}</span></a></p>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      );
+    })}
+  </div>
+</Base>

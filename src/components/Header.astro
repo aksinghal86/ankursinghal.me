@@ -1,0 +1,26 @@
+---
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const links = [
+  { href: '/litigation', label: 'Litigation' },
+  { href: '/research', label: 'Research' },
+  { href: '/cv', label: 'CV' },
+  { href: '/software', label: 'Software and AI' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
+];
+const current = (href: string) => path === href || path.startsWith(href + '/');
+---
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="/">Ankur Singhal</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul>
+        {links.map((l) => (
+          <li><a href={l.href} aria-current={current(l.href) ? 'page' : undefined}>{l.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>

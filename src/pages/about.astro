@@ -1,0 +1,56 @@
+---
+import { Image } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import avatar from '../assets/avatar.jpg';
+import DecayChart from '../components/DecayChart.astro';
+---
+
+<Base title="About" description="About Ankur Singhal: an exposure scientist who combines data analytics, machine learning, and software development.">
+  <div class="wrap">
+    <div class="page-head">
+      <h1>About</h1>
+    </div>
+    <div class="about-grid">
+      <div class="prose">
+        <p>
+          I am an exposure scientist who came up through toxicology, consumer product safety, and risk assessment, and found that the hard part of the work is usually the data.
+          So I learned to code, and then to build software. Most of what I do now sits between the three.
+        </p>
+        <p>
+          I started at EH&amp;E as a subcontractor on a lead exposure project in La Oroya, Peru, and joined full time after that.
+          Before that I worked at Exponent, first as a scientist and then as a managing scientist, and ran my own consultancy.
+          Today I work on drinking water contamination, air emissions, lead, asbestos, and consumer product exposures, mostly for legal teams.
+        </p>
+
+        <h2>The question behind the work</h2>
+        <p>
+          Nearly every project starts the same way: who was exposed, to what, and how much?
+          I answer it with sampling, models, and data, and increasingly with tools that let clients check the answer themselves.
+        </p>
+        <DecayChart />
+
+        <p>
+          My goal is to bring data science and software development to exposure assessment, a field that has been slow to adopt them.
+        </p>
+
+        <h2>Outside of work</h2>
+        <p>
+          The title says it all -- I like being outside. Almost 10 years ago, I moved to Bishop, CA, a small town in the foothills of the Sierra Nevada, to enjoy rock climbing, mountaineering, backpacking, hiking, and all the other adventures that the mountains have to offer. Recently, I have been getting more into big wall climbing and peak-bagging. I also serve as a member of the Inyo County Search and Rescue (InyoSAR), a volunteer organization that rescues people in everything from medical emergencies to technical rock rescue and snow and ice rescue in the mountains.
+        </p>
+        <p> 
+          I also play the guitar. Most importantly, I enjoy being a dad to my 3.5 year old son who will likely very soon outdo all my climbing accomplishments.
+        </p>
+        <p>
+          <a href="/cv">Read the CV</a> or <a href="/contact">get in touch</a>.
+        </p>
+      </div>
+      <aside>
+        <Image src={avatar} alt="Ankur Singhal" width={544} height={544} />
+        <p>How to say my name</p>
+        <audio controls preload="none" src="/files/ankur-name.m4a">
+          <a href="/files/ankur-name.m4a">Download the recording</a>
+        </audio>
+      </aside>
+    </div>
+  </div>
+</Base>

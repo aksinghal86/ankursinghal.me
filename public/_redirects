@@ -1,0 +1,20 @@
+# Old Hugo site addresses -> new pages (301 = permanent)
+/software/eto-explorer-app          /software/eto-explorer            301
+/software/eto-explorer-app/         /software/eto-explorer            301
+/software/formaldehyde-laminate     /software/formaldehyde-estimator  301
+/software/formaldehyde-laminate/    /software/formaldehyde-estimator  301
+/software/smartLYT                  /software/smartlyt                301
+/software/smartLYT/                 /software/smartlyt                301
+/project                            /litigation                       301
+/project/*                          /litigation                       301
+/talk                               /research                         301
+/talk/*                             /research                         301
+/form/contact                       /contact                          301
+/cv/*                               /cv                               301
+/blog/*                             /blog                             301
+/collection                         /                                 301
+/collection/*                       /                                 301
+/elements                           /                                 301
+/elements/*                         /                                 301
+/contributors                       /                                 301
+/license                            /                                 301

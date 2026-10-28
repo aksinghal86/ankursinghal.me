@@ -1,0 +1,38 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('software', (p) => !p.data.hidden);
+  return projects.map((p) => ({ params: { id: p.id }, props: { project: p } }));
+}
+
+const { project } = Astro.props;
+const { Content } = await render(project);
+const d = project.data;
+---
+
+<Base title={d.title} description={d.summary}>
+  <div class="wrap">
+    <div class="page-head">
+      <p class="byline"><a href="/software">Software and AI</a></p>
+      <h1>{d.title}</h1>
+      <span class="status" data-status={d.status}>{d.status}</span>
+      <p class="lede">{d.summary}</p>
+      {d.links.length > 0 && (
+        <div class="toolbar">
+          {d.links.map((l, i) => (
+            /^https?:\/\//.test(l.url)
+              ? <a class={i === 0 ? 'btn' : 'btn quiet'} href={l.url} target="_blank" rel="noopener noreferrer">{l.label}<span class="sr-only"> (opens in a new tab)</span></a>
+              : <a class={i === 0 ? 'btn' : 'btn quiet'} href={l.url}>{l.label}</a>
+          ))}
+        </div>
+      )}
+    </div>
+    {d.image && <img class="detail-image" src={d.image} alt={d.imageAlt} width="640" height="480" />}
+    <article class="article prose">
+      <Content />
+      {d.stack.length > 0 && <p class="meta">Built with {d.stack.join(', ')}.</p>}
+    </article>
+  </div>
+</Base>
