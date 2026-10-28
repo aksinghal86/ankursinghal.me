@@ -24,7 +24,7 @@ I did not build the connector. It is an off-the-shelf integration that gives the
 
 ## A test run
 
-On 1,4-dioxane, 2023 to 2026, the search returned 73 papers. Of the first 40, a quarter were off-topic, mostly studies that use dioxane as a lab solvent. The synthesis surfaced a live disagreement over dioxane's cancer mode of action that matters for how it is regulated. The [write-up](/blog/pubmed-connector) walks through the run.
+On 1,4-dioxane, 2023 to 2026, the search returned 73 papers. Of the first 40, a quarter were off-topic, mostly studies that use dioxane as a lab solvent. The synthesis surfaced a live disagreement over dioxane's cancer mode of action that matters for how it is regulated.
 
 ## Limits
 

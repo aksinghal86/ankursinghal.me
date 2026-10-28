@@ -17,7 +17,7 @@ To date, we have filed claims for:
 - More than 5,300 distinct drinking water sources
 - More than $1.65 billion in claim value, over 10% of the total settlement value across the manufacturers involved
 
-The systems are spread across most of the country. There's a large presence in the Northeast (Massachusetts, New York, Rhode Island, and more) and nearly all of Southern California. There's significant coverage across Ohio, Illinois, Minnesota, and Indiana, plus a large share of Florida and parts of Oregon, Washington, and Texas. It extends as far as Guam and the Northern Mariana Islands.
+The systems are spread across most of the country. There's a large presence in the Northeast (Massachusetts, New York, Rhode Island, and more) and nearly all of Southern California. There's significant coverage across Ohio, Illinois, Minnesota, and Indiana, plus a large share of Florida and parts of Oregon, Washington, and Texas. It also extends to U.S. territories.
 
 ## Why a claim is not paperwork
 
