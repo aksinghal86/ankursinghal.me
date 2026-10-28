@@ -1,6 +1,6 @@
 ---
-title: "Behind the numbers: filing AFFF claims for 1,850 water systems"
-description: What it took to file PFAS settlement claims for nearly 1,850 public water systems in the AFFF litigation, and what comes next.
+title: "Behind the numbers: filing AFFF claims for more than 1,850 water systems"
+description: What it took to file PFAS settlement claims for more than 1,850 public water systems in the AFFF litigation, and what comes next.
 date: 2026-10-28
 tags: [PFAS, AFFF, drinking water, data]
 draft: true
@@ -12,8 +12,8 @@ For the last three years, our team at Environmental Health & Engineering (EH&E) 
 
 To date, we have filed claims for:
 
-- Nearly 1,850 water systems
-- Serving an estimated 12 million people
+- More than 1,850 water systems
+- Serving about 26 million people
 - More than 5,300 distinct drinking water sources
 - More than $1.65 billion in claim value, over 10% of the total settlement value across the manufacturers involved
 
@@ -23,7 +23,7 @@ The systems are spread across most of the country. There's a large presence in t
 
 A settlement claim asks a simple question: what was in this water system's sources, when, and how much water did they produce? Answering it is not simple. The records are incomplete, inconsistent, and often decades old. Each lab reported results its own way, and each water system kept production records its own way. Every settlement has its own eligibility rules.
 
-Each claim means rebuilding a system's contamination history from those records and then testing it against the settlement criteria. Doing that once is careful work. Doing it for nearly 1,850 systems on a court deadline is a data problem.
+Each claim means rebuilding a system's contamination history from those records and then testing it against the settlement criteria. Doing that once is careful work. Doing it for more than 1,850 systems on a court deadline is a data problem.
 
 ## What we built
 
