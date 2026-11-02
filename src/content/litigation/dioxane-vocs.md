@@ -3,7 +3,7 @@ chemical: 1,4-Dioxane and chlorinated solvents
 medium: Drinking water, groundwater, soil
 order: 1
 summary: >-
-    Fate and transport, source attribution and drinking water exposure evaluation for a water utility. I built the case’s data and analytics hub: 100K+ results from decades of scanned lab reports, 15+ laboratories, and 30+ sampling locations, consolidated into one database and dashboard where the legal team and experts could explore the data and insights themselves. 
-
-    Because I built the data and understand the hydrogeology and contaminant chemistry, including which chemicals travel with dioxane and which only look like they should, I could spot the gaps that mattered and turn them into analyses that moved the case forward.
+    Regulatory review, and exposure assessment and risk assessement for 1,4-dioxane exposures in drinking water.
+    
+    In additon, built a data extraction, data management, and data analytics hub for the case from 100K+ results from decades of scanned lab reports, 15+ laboratories, and 30+ sampling locations. One consolidated database for the whole team along with a web app where the data could be explored and downloaded. Easy to scale. My intimate understanding of the database and knowledge across different domains, e.g., hydrogeology, contaminant chemistry, fate-and-transport, allowed me to conduct analyses that identified gaps and provided insights at the early stages of the project. 
 ---

@@ -2,7 +2,7 @@
 title: Water contamination data platform
 kind: Litigation apps, dashboards, and data tools
 status: Client only
-summary: A web application that pulls 1,4-dioxane, VOC, and PFAS results from several laboratories into one database, traces every number back to its source report, and displays everything on a map filterable by chemical, location, and date. 
+summary: One data and analytics hub for the whole case. Visualizations of all the extracted data in a map or a table format. Data can be downloaded from the dashboard with underlying reports or files also directly accessible from the dashboard. Allows transformations of the data and analyses on the fly. 
 image: /img/software/contamination-platform.svg
 imageAlt: "Illustration of a map with sample locations sized by concentration"
 stack: [Python, Django REST Framework, React, PostgreSQL, Leaflet, R]
