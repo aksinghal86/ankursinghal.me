@@ -1,7 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
-// Messages go through Formspree (free tier) to the email set up in your Formspree account.
-const FORM_ID = 'xvoyrjrr';
+// Messages go to Netlify Forms. See them in the Netlify dashboard under Forms > contact,
+// and set email notifications there (Site configuration > Notifications > Emails and webhooks).
 ---
 
 <Base title="Contact" description="Contact Ankur Singhal about expert work, litigation data support, or collaboration.">
@@ -13,7 +13,8 @@ const FORM_ID = 'xvoyrjrr';
       </p>
     </div>
 
-    <form class="form" id="contact" action={`https://formspree.io/f/${FORM_ID}`} method="POST">
+    <form class="form" id="contact" name="contact" method="POST" action="/contact-thanks" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="contact" />
       <label>
         Name
         <input type="text" name="name" autocomplete="name" required />
@@ -28,9 +29,8 @@ const FORM_ID = 'xvoyrjrr';
       </label>
       <label class="hp" aria-hidden="true">
         Leave this empty
-        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" />
+        <input type="text" name="bot-field" tabindex="-1" autocomplete="off" />
       </label>
-      <input type="hidden" name="_subject" value="Message from ankursinghal.me" />
       <div>
         <button class="btn" type="submit">Send message</button>
       </div>
@@ -47,10 +47,11 @@ const FORM_ID = 'xvoyrjrr';
       status.dataset.state = '';
       status.textContent = 'Sending...';
       try {
-        const res = await fetch(form.action, {
+        const body = new URLSearchParams(new FormData(form) as unknown as Record<string, string>).toString();
+        const res = await fetch('/', {
           method: 'POST',
-          body: new FormData(form),
-          headers: { Accept: 'application/json' },
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body,
         });
         if (res.ok) {
           form.reset();
