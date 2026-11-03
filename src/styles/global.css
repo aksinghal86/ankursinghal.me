@@ -308,4 +308,15 @@ hr { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0; }
 .index-row .summary .tool-link { font-family: var(--font-ui); font-size: var(--step--1); }
 .index-row .summary .tool-link::before { content: 'Tool: '; color: var(--muted); }
 .group { scroll-margin-top: 1.5rem; }
-.group-intro { margin-bottom: 2rem; }
+
+/* Litigation data service panel on the software page */
+.service { display: grid; gap: 1.5rem 3rem; background: var(--paper-2); border-left: 3px solid var(--water); padding: clamp(1.25rem, 3vw, 2rem); margin: 1.5rem 0 2.5rem; }
+@media (min-width: 56rem) { .service { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); } }
+.service-pitch p { margin: 0 0 0.9em; max-width: 34rem; }
+.service-pitch p:last-child { margin: 1.2rem 0 0; }
+.service-kicker { font-family: var(--font-ui); font-size: var(--step--1); font-weight: 650; text-transform: uppercase; letter-spacing: 0.06em; color: var(--water); }
+.service-list { display: grid; gap: 1.25rem 2rem; margin: 0; align-content: start; }
+@media (min-width: 36rem) { .service-list { grid-template-columns: 1fr 1fr; } }
+.service-list dt { font-family: var(--font-ui); font-weight: 650; }
+.service-list dd { margin: 0.25rem 0 0; font-size: var(--step--1); line-height: 1.5; }
+.projects-label { margin: 0 0 0.8rem; }

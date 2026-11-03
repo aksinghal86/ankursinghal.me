@@ -33,27 +33,38 @@ const kinds = [
           <h2>{kind.name}</h2>
           <p class="group-blurb">{kind.blurb}</p>
           {kind.id === 'litigation-data' && (
-            <div class="group-intro">
-              <div class="prose">
+            <div class="service">
+              <div class="service-pitch">
+                <p class="service-kicker">Service for legal teams</p>
                 <p>
-                  Cases with large data or document components need infrastructure whether or not an expert is testifying. I can set that up independently of expert work:
+                  Cases with large data or document components need infrastructure whether or not an expert is testifying. I set that up independently of expert work.
                 </p>
+                <p>
+                  AI makes this much faster. We use it to pull results out of scanned lab reports and spreadsheets and to automate the routine parts of cleaning and organizing them. But someone who understands the chemistry, the sampling, and the case still has to review what comes out. That review is the part that holds up.
+                </p>
+                <p><a class="btn" href="/contact">Tell me about the matter</a></p>
               </div>
-              <dl class="plain-list">
-                <dt>Intake and harmonization</dt>
-                <dd>Combining data of all kinds, including lab reports, spreadsheets, and monitoring data, into one clean, documented dataset.</dd>
-                <dt>Dashboards</dt>
-                <dd>Maps, charts, and tables that let the legal team and experts explore the data and find the story themselves.</dd>
-                <dt>Gap analysis</dt>
-                <dd>Finding what the data cannot yet support, and what would close the gap to make the case stronger.</dd>
-                <dt>Follow-on recommendations</dt>
-                <dd>Sampling and analysis plans, additional analyses, and next steps.</dd>
+              <dl class="service-list">
+                <div>
+                  <dt>Intake and harmonization</dt>
+                  <dd>Lab reports, spreadsheets, and monitoring data combined into one clean, documented dataset.</dd>
+                </div>
+                <div>
+                  <dt>Dashboards</dt>
+                  <dd>Maps, charts, and tables that let the legal team and experts explore the data themselves.</dd>
+                </div>
+                <div>
+                  <dt>Gap analysis</dt>
+                  <dd>What the data cannot yet support, and what would close the gap.</dd>
+                </div>
+                <div>
+                  <dt>Follow-on recommendations</dt>
+                  <dd>Sampling and analysis plans, additional analyses, and next steps.</dd>
+                </div>
               </dl>
-              <div class="prose">
-                <p><a href="/contact">Tell me about the matter</a> and what you have, and I will tell you what I can do with it. Some of the tools I have built for legal teams:</p>
-              </div>
             </div>
           )}
+          {kind.id === 'litigation-data' && <p class="service-kicker projects-label">Tools I have built for legal teams</p>}
           <ul class="projects">
             {items.map((p) => {
               const href = `/software/${p.id}`;
