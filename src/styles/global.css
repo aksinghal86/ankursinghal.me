@@ -303,3 +303,9 @@ hr { border: 0; border-top: 1px solid var(--rule); margin: 3rem 0; }
 .prose th, .prose td { text-align: left; padding: 0.45rem 1.4rem 0.45rem 0; border-bottom: 1px solid var(--rule); }
 .prose th { font-weight: 650; border-bottom-color: var(--ink); }
 .prose td:last-child, .prose th:last-child { text-align: right; padding-right: 0; }
+
+/* Links from a litigation row to the related tool, and the service intro on the software page */
+.index-row .summary .tool-link { font-family: var(--font-ui); font-size: var(--step--1); }
+.index-row .summary .tool-link::before { content: 'Tool: '; color: var(--muted); }
+.group { scroll-margin-top: 1.5rem; }
+.group-intro { margin-bottom: 2rem; }

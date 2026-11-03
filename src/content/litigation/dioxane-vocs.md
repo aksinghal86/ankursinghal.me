@@ -2,6 +2,7 @@
 chemical: 1,4-Dioxane and chlorinated solvents
 medium: Drinking water, groundwater, soil
 order: 1
+tools: [contamination-dashboard]
 summary: >-
     Regulatory review, and exposure assessment and risk assessement for 1,4-dioxane exposures in drinking water.
     

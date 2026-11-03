@@ -1,6 +1,6 @@
 ---
 title: Ethylene Oxide Explorer
-kind: Litigation apps, dashboards, and data tools
+kind: Litigation data support, apps, and dashboards
 status: Live
 summary: Maps ethylene oxide emissions reported by facilities and the cancer risks EPA estimated around them, and lets you compare facilities and compare EPA's two assessments side by side.
 image: /img/software/eto-explorer.webp

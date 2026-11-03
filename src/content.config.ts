@@ -12,6 +12,7 @@ const litigation = defineCollection({
     summary: z.string(),
     order: z.number().default(100),
     group: z.enum(['main', 'other']).default('main'),
+    tools: z.array(z.string()).default([]), // ids of related projects in src/content/software
   }),
 });
 
@@ -20,7 +21,7 @@ const software = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/software' }),
   schema: z.object({
     title: z.string(),
-    kind: z.enum(['Litigation apps, dashboards, and data tools', 'Software, AI tools, integration, and agents']),
+    kind: z.enum(['Litigation data support, apps, and dashboards', 'Software, AI tools, integration, and agents']),
     status: z.enum(['Live', 'Client only', 'In development']),
     summary: z.string(),
     image: z.string().optional(),

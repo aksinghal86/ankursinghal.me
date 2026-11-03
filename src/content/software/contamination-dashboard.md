@@ -1,6 +1,6 @@
 ---
 title: Water contamination data platform
-kind: Litigation apps, dashboards, and data tools
+kind: Litigation data support, apps, and dashboards
 status: Client only
 summary: One data and analytics hub for the whole case comprising 100K+ rows of data. Visualizations of all the extracted data in a map or a table format. Data can be downloaded from the dashboard with underlying reports or files also directly accessible from the dashboard. Allows transformations of the data and analyses on the fly. 
 image: /img/software/contamination-platform.svg

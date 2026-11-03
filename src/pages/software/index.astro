@@ -4,8 +4,8 @@ import Base from '../../layouts/Base.astro';
 
 const projects = (await getCollection('software', (p) => !p.data.hidden)).sort((a, b) => a.data.order - b.data.order);
 const kinds = [
-  { name: 'Litigation apps, dashboards, and data tools', blurb: 'Data platforms, dashboards, and apps that bring large sampling and exposure data sets to life. ' },
-  { name: 'Software, AI tools, integration, and agents', blurb: 'Apps and tools that use language models and machine learning, and agents that connect models to real data and workflows.' },
+  { id: 'litigation-data', name: 'Litigation data support, apps, and dashboards', blurb: 'Data platforms, dashboards, and apps that bring large sampling and exposure data sets to life. ' },
+  { id: 'ai-tools', name: 'Software, AI tools, integration, and agents', blurb: 'Apps and tools that use language models and machine learning, and agents that connect models to real data and workflows.' },
 ] as const;
 ---
 
@@ -29,9 +29,31 @@ const kinds = [
     {kinds.map((kind) => {
       const items = projects.filter((p) => p.data.kind === kind.name);
       return items.length > 0 && (
-        <section class="group">
+        <section class="group" id={kind.id}>
           <h2>{kind.name}</h2>
           <p class="group-blurb">{kind.blurb}</p>
+          {kind.id === 'litigation-data' && (
+            <div class="group-intro">
+              <div class="prose">
+                <p>
+                  Cases with large data or document components need infrastructure whether or not an expert is testifying. I can set that up independently of expert work:
+                </p>
+              </div>
+              <dl class="plain-list">
+                <dt>Intake and harmonization</dt>
+                <dd>Combining data of all kinds, including lab reports, spreadsheets, and monitoring data, into one clean, documented dataset.</dd>
+                <dt>Dashboards</dt>
+                <dd>Maps, charts, and tables that let the legal team and experts explore the data and find the story themselves.</dd>
+                <dt>Gap analysis</dt>
+                <dd>Finding what the data cannot yet support, and what would close the gap to make the case stronger.</dd>
+                <dt>Follow-on recommendations</dt>
+                <dd>Sampling and analysis plans, additional analyses, and next steps.</dd>
+              </dl>
+              <div class="prose">
+                <p><a href="/contact">Tell me about the matter</a> and what you have, and I will tell you what I can do with it. Some of the tools I have built for legal teams:</p>
+              </div>
+            </div>
+          )}
           <ul class="projects">
             {items.map((p) => {
               const href = `/software/${p.id}`;

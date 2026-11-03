@@ -1,6 +1,6 @@
 ---
 title: Claims data system for public water systems
-kind: Litigation apps, dashboards, and data tools
+kind: Litigation data support, apps, and dashboards
 status: Client only
 summary: An online intake tool and data pipeline that collected critical data, e.g. PFAS results and production volue, from over 1,850 water providers for each of their drinking water sources to file AFFF claims on their behalf totaling >$1.5 billion dollars in settlement value.
 image: /img/software/claims-data-system.svg
