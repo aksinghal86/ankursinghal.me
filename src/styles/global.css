@@ -19,8 +19,8 @@
   --step-0: 1.0625rem;
   --step-1: 1.25rem;
   --step-2: 1.625rem;
-  --step-3: clamp(1.9rem, 1.5rem + 1.6vw, 2.5rem);
-  --step-4: clamp(2.3rem, 1.6rem + 3vw, 3.6rem);
+  --step-3: clamp(1.9rem, 1.5rem + 1.2vw, 2.4rem);
+  --step-4: clamp(2.3rem, 1.6rem + 2.2vw, 3.2rem);
 
   --gutter: clamp(1rem, 4vw, 2rem);
   --wide: 72rem;
@@ -43,6 +43,9 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-padding-top: 5rem; }
+/* Laptop-size windows (often 125-150% display scaling) read large at full size.
+   Scale everything to 90% at 1280px wide, easing back to 100% by 1920px. Phones and tablets keep 100%. */
+@media (min-width: 64em) { html { font-size: clamp(90%, calc(0.9rem + (100vw - 80rem) * 0.0025), 100%); } }
 body {
   margin: 0;
   background: var(--paper);
