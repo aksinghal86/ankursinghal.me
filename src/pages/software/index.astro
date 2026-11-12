@@ -4,20 +4,20 @@ import Base from '../../layouts/Base.astro';
 
 const projects = (await getCollection('software', (p) => !p.data.hidden)).sort((a, b) => a.data.order - b.data.order);
 const kinds = [
-  { id: 'litigation-data', name: 'Litigation data support, apps, and dashboards', blurb: 'Data platforms, dashboards, and apps that bring large sampling and exposure data sets to life. ' },
-  { id: 'ai-tools', name: 'Software, AI tools, integration, and agents', blurb: 'Apps and tools that use language models and machine learning, and agents that connect models to real data and workflows.' },
+  { id: 'litigation-data', name: 'Litigation data support, apps, and dashboards', blurb: 'Data platforms, dashboards, and applications that help teams interrogate large sampling, exposure, and document datasets.' },
+  { id: 'ai-tools', name: 'Software, AI tools, integration, and agents', blurb: 'Applications and tools that use language models and machine learning, plus agents that connect models to real data and workflows.' },
 ] as const;
 ---
 
 <Base
-  title="Software and AI"
+  title="Software, AI, and data systems"
   description="Apps, dashboards, AI tools, and agents by Ankur Singhal: language model workflows, MCP servers, and data pipelines."
 >
   <div class="wrap">
     <div class="page-head">
-      <h1>Software and AI</h1>
+      <h1>Software, AI, and data systems</h1>
       <p class="lede">
-        I develop AI tools, integrate language models into analysis and reporting workflows, build agents and MCP servers, and make the dashboards and data pipelines underneath them.
+        I build data systems, dashboards, and software for complex analysis. My work includes AI-assisted tools, language-model integrations, and agents that connect models to real data and workflows.
       </p>
     </div>
     <!-- <div class="prose">
@@ -37,16 +37,16 @@ const kinds = [
               <div class="service-pitch">
                 <p class="service-kicker">Service for legal teams</p>
                 <p>
-                  Cases with large data or document components need infrastructure whether or not an expert is testifying. I set that up independently of expert work.
+                  Large, document-heavy cases need reliable data infrastructure, whether or not an expert is testifying. I build that foundation as a separate service.
                 </p>
                 <p>
-                  AI makes this much faster. We use it to pull results out of scanned lab reports and spreadsheets and to automate the routine parts of cleaning and organizing them. But someone who understands the chemistry, the sampling, and the case still has to review what comes out. That review is the part that holds up.
+                  AI can accelerate the extraction of information from scanned lab reports and spreadsheets, as well as repetitive data-cleaning tasks. The results still need review by someone who understands the chemistry, sampling, and case context. That expertise is essential to reliable results.
                 </p>
                 <p><a class="btn" href="/contact">Tell me about the matter</a></p>
               </div>
               <dl class="service-list">
                 <div>
-                  <dt>Intake and harmonization</dt>
+                  <dt>Data intake and standardization</dt>
                   <dd>Lab reports, spreadsheets, and monitoring data combined into one clean, documented dataset.</dd>
                 </div>
                 <div>
@@ -58,7 +58,7 @@ const kinds = [
                   <dd>What the data cannot yet support, and what would close the gap.</dd>
                 </div>
                 <div>
-                  <dt>Follow-on recommendations</dt>
+                  <dt>Recommended next steps</dt>
                   <dd>Sampling and analysis plans, additional analyses, and next steps.</dd>
                 </div>
               </dl>
