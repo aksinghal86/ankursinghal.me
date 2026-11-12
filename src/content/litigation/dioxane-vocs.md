@@ -4,7 +4,7 @@ medium: Drinking water, groundwater, soil
 order: 1
 tools: [contamination-dashboard]
 summary: >-
-    Regulatory review, and exposure assessment and risk assessement for 1,4-dioxane exposures in drinking water.
-    
-    In additon, built a data extraction, data management, and data analytics hub for the case from 100K+ results from decades of scanned lab reports, 15+ laboratories, and 30+ sampling locations. One consolidated database for the whole team along with a web app where the data could be explored and downloaded. Easy to scale. My intimate understanding of the database and knowledge across different domains, e.g., hydrogeology, contaminant chemistry, fate-and-transport, allowed me to conduct analyses that identified gaps and provided insights at the early stages of the project. 
+    Conducted regulatory review and assessed exposure and risk associated with 1,4-dioxane in drinking water.
+
+    Built a data extraction, management, and analytics hub for a case involving more than 100,000 results from decades of scanned lab reports, 15+ laboratories, and 30+ sampling locations. The system gave the team a consolidated database and a web app for exploring and downloading data, with a design that could scale. Drawing on detailed knowledge of the database, hydrogeology, contaminant chemistry, and fate and transport, I identified data gaps and surfaced insights early in the project. 
 ---

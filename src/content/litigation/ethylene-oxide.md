@@ -2,5 +2,5 @@
 chemical: Ethylene oxide
 medium: Ambient air
 order: 6
-summary: Cancer risk from sterilizer emissions, using dispersion modeling and site sampling data. I have evaluated the basis of EPA's IRIS cancer value and the NIOSH epidemiology behind it, and worked with emissions inventories, ambient monitoring data, and cancer registry data to test what the numbers mean for nearby communities.
+summary: Assessed cancer risks from sterilizer emissions using air-dispersion modeling and site-specific sampling data. Evaluated the scientific basis for EPA’s IRIS cancer risk estimate and the NIOSH epidemiological evidence, and analyzed emissions inventories, ambient air monitoring, and cancer registry data to assess potential risks to nearby communities.
 ---
