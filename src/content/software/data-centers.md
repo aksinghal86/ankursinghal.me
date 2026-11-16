@@ -3,12 +3,12 @@ title: Data centers resource
 kind: Litigation data support, apps, and dashboards
 status: Live
 summary: A free, public resource on data centers and the environment. Air, noise, water, and carbon in one place, with the data, news, science, and regulations behind them.
-image: /img/software/data-centers.svg
-imageAlt: "Illustration of a data center with air, noise, water, and carbon tabs"
+image: /img/software/data-centers.webp
+imageAlt: "Screenshot of the data centers resource map of Northern Virginia, showing air sensors, EPA monitors, data center buildings, and reported cases"
 stack: [Python, JavaScript, D3, Leaflet]
 links:
   - label: Open the resource
-    url: https://ehe-analytics.github.io/data-centers/
+    url: https://ehe-analytics.github.io/data-centers/v2/
 order: 1
 ---
 
@@ -18,9 +18,11 @@ We built this as a resource for everyone to use. It pulls the pieces into one pl
 
 ## What is in it
 
-- Air. Sensor data near data centers alongside the regulatory monitors for background.
-- Noise. Published measurements, with a note on how verifiable each source is.
-- Water. What is known about water use and the open questions.
-- Carbon. Emissions estimates and where they come from.
+- Map. An interactive map of Northern Virginia with layers you can turn on and off: Virginia Department of Environmental Quality (DEQ) air sensors, U.S. Environmental Protection Agency (EPA) regulatory monitors, data center buildings from OpenStreetMap, hyperscale data centers by county, and reported cases.
+- Developments. A searchable table of legal, regulatory, and scientific developments, with the source for each and a download as a spreadsheet.
+- Air. Low-cost DEQ sensor readings of fine particulate matter (PM2.5), nitrogen dioxide (NO2), and carbon monoxide (CO), compared with EPA's regulatory monitors.
+- Noise. Published noise measurements near data centers, with links to each source.
+- Water. Estimates of data center water use in the Potomac basin and Loudoun County, and a summary of reported drinking water concerns.
+- Carbon. Published carbon dioxide (CO2) estimates for data centers, with notes on how they differ in scope, year, and method.
 
-[Open the data centers resource](https://ehe-analytics.github.io/data-centers/)
+[Open the data centers resource](https://ehe-analytics.github.io/data-centers/v2/)
